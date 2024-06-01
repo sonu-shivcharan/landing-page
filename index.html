@@ -1,66 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100">
     <!-- Header -->
-    <header class="bg-white shadow">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="text-lg font-bold">Logo</div>
-            <nav class="space-x-4">
-                <a href="#home" class="text-gray-700 hover:text-gray-900">Home</a>
-                <a href="#features" class="text-gray-700 hover:text-gray-900">Features</a>
-                <a href="#contact" class="text-gray-700 hover:text-gray-900">Contact</a>
-            </nav>
-        </div>
+    <header id="header" class="bg-transparent text-white flex w-full">
+      <div
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <div class="text-lg font-bold">Rakini</div>
+        <nav class="space-x-4 text-gray-600 font-bold">
+          <a href="#home" class=" hover:text-gray-900">Home</a>
+          <a href="#features" class="hover:text-gray-900"
+            >Features</a
+          >
+          <a href="#contact" class="hover:text-gray-900"
+            >Contact</a
+          >
+        </nav>
+      </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-gray-200 py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl font-bold text-gray-800">Welcome to Our Landing Page</h1>
-            <p class="text-gray-600 mt-4">Your success starts here.</p>
-            <a href="#features" class="mt-6 px-4 py-2 bg-blue-600 text-white rounded-full">Learn More</a>
+    <section
+      id="home"
+      class="bg-gray-200 py-20 h-screen flex justify-around items-center flex-row"
+    >
+    
+        <div class="m-4 flex flex-col text-left">
+          <h1 class="text-4xl text-white font-bold">Rakini SoftTech</h1>
+          <h4 class="font-bold text-white text-2xl">
+            Your Gateway to Innovative Tech Solution
+          </h4>
+          <h2 class="text-gray-600 mt-6 font-bold">
+            Transforming Businesses with Cutting-Edge Technology Services
+          </h2>
+          <div class="mt-2 action-btn-container">
+            <a href="#features"
+              ><button
+                class="bg-blue-500 p-3 rounded-lg mx-2 mt-2 border-2 border-blue-500 text-white font-bold hover:bg-white hover:text-black duration-200"
+              >
+                Learn More
+              </button></a
+            >
+            <a href="#fs" class="p-2"
+              ><button
+                class="bg-transparent p-3 rounded-lg mx-2 mt-2 border-2 border-blue-500 text-white font-bold hover:bg-transparent hover:text-black duration-200"
+              >
+                Contact
+              </button></a
+            >
+          </div>
         </div>
+        <div class="hero-img rounded-lg border-2 border-blue-300 bg-white"></div>
+      
     </section>
 
     <!-- Features Section -->
     <section id="features" class="py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-gray-800">Features</h2>
-            <p class="text-gray-600 mt-4">What makes us unique.</p>
-            <div class="flex flex-wrap mt-8">
-                <div class="w-full md:w-1/3 px-4 py-2">
-                    <div class="bg-white shadow rounded-lg p-6">
-                        <h3 class="text-xl font-bold text-gray-800">Feature One</h3>
-                        <p class="text-gray-600 mt-2">Description of feature one.</p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/3 px-4 py-2">
-                    <div class="bg-white shadow rounded-lg p-6">
-                        <h3 class="text-xl font-bold text-gray-800">Feature Two</h3>
-                        <p class="text-gray-600 mt-2">Description of feature two.</p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/3 px-4 py-2">
-                    <div class="bg-white shadow rounded-lg p-6">
-                        <h3 class="text-xl font-bold text-gray-800">Feature Three</h3>
-                        <p class="text-gray-600 mt-2">Description of feature three.</p>
-                    </div>
-                </div>
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-800">Features</h2>
+        <p class="text-gray-600 mt-4">What makes us unique.</p>
+        <div class="flex flex-wrap mt-8">
+          <div class="w-full md:w-1/3 px-4 py-2">
+            <div class="bg-white shadow rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800">Feature One</h3>
+              <p class="text-gray-600 mt-2">Description of feature one.</p>
             </div>
+          </div>
+          <div class="w-full md:w-1/3 px-4 py-2">
+            <div class="bg-white shadow rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800">Feature Two</h3>
+              <p class="text-gray-600 mt-2">Description of feature two.</p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 px-4 py-2">
+            <div class="bg-white shadow rounded-lg p-6">
+              <h3 class="text-xl font-bold text-gray-800">Feature Three</h3>
+              <p class="text-gray-600 mt-2">Description of feature three.</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
-        </div>
+      <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+      </div>
     </footer>
-</body>
+    <script src="src/main.js"></script>
+  </body>
 </html>
