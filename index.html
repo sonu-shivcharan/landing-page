@@ -4,54 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
-    
+
     <!--<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
     -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="/dist/output.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-gray-100">
+  <body class="bg-white font-sans">
     <!-- Header -->
-    <header id="header" class="flex justify-center items-center">
-      <div class="mx-auto px-6 flex justify-start items-center">
-        <div class="menu-icon text-2xl py-3">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <h1 class="text-lg font-bold p-2 mx-2">Rakini</h1>
+    <header id="header" class="flex justify-between items-center p-[5px]">
+      <div class="container mx-auto px-2 flex justify-between items-center">
+        <div class="flex items-center">
+          <i class="menu-icon fa-solid fa-bars text-2xl p-2"></i>
+          <h1 class="p-2 text-2xl font-bold">Rakini</h1>
         </div>
 
-        <nav class="space-x-4 text-gray-600 font-bold">
-          <a href="#home" class=" hover:text-gray-900">Home</a>
-          <a href="#features" class="hover:text-gray-900">Features</a>
-          <a href="#contact" class="hover:text-blue-900">Contact</a>
-        </nav>
+      <nav id="nav-bar" class="flex items-center font-bold">
+     <a href="#home">Home</a>
+     <a href="#features">Features</a>
+     <a href="#contact">Contact</a>
+     <a href="#about">About Us</a> 
     
-        
+   </nav>
+      </div>
     </header>
-
+    <div id="side-nav" class="">
+      <h1 class="font-bold text-2xl p-4">Rakini</h1>
+      <div class="flex flex-col">
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About Us</a> 
+      </div>
+    </div>
     <!-- Hero Section -->
     <section
       id="home"
-      class="bg-gray-200 px-4 pt-20 flex justify-around items-center flex-row">
-    
-        <div class="headline-container m-4 flex flex-col text-left">
-          <h1 class="slide-up-animation text-4xl text-white font-bold">Rakini SoftTech</h1>
-          <h4 class="slide-up-animation font-bold text-white text-2xl">
-            Your Gateway to Innovative Tech Solution
-          </h4>
-          <h4 class="slide-up-animation text-gray-600 mt-6 font-bold">
-            Transforming Businesses with Cutting-Edge Technology Services
-          </h4>
-          
-          <div class="my-8 action-btn-container">
-            <a href="#features" class="slide-up-animation bg-blue-500 p-3 rounded-lg mx-2 mt-2 border-2 border-blue-500 text-white font-bold hover:bg-white hover:text-black duration-200">
-                Learn More
-              </a>
-            <a href="#fs" class="slide-up-animation bg-transparent p-3 rounded-lg mx-2 mt-2 border-2 border-blue-500 text-white font-bold hover:bg-transparent hover:text-black duration-200">Get In Touch</a>
-          </div>
+      class="bg-gray-200 px-4 pt-20 flex justify-around items-center"
+    >
+      <div class="headline-container m-4 flex flex-col text-left">
+        <h1 class="slide-up-animation text-4xl text-white font-bold">
+          Rakini SoftTech
+        </h1>
+        <h4 class="slide-up-animation font-bold text-white text-2xl">
+          Your Gateway to Innovative Tech Solution
+        </h4>
+        <h4 class="slide-up-animation text-gray-600 mt-6 font-bold">
+          Transforming Businesses with Cutting-Edge Technology Services
+        </h4>
+
+        <div class="my-8 action-btn-container">
+          <a
+            href="#features"
+            class="slide-up-animation bg-blue-500 p-3 rounded-lg mx-2 mt-2 border-2 border-blue-500 text-white font-bold hover:bg-transparent duration-200"
+          >
+            Learn More
+          </a>
+          <a
+            href="#fs"
+            class="slide-up-animation bg-transparent p-3 rounded-lg mx-2 mt-2 border-2 border-blue-500 text-white font-bold hover:bg-blue-500 duration-200"
+            >Get In Touch</a
+          >
         </div>
-        <div class="hero-img rounded-lg border-2 border-blue-300 bg-white"></div>
-      
+      </div>
+      <div class="hero-img rounded-lg border-2 border-blue-300 bg-white"></div>
     </section>
 
     <!-- Features Section -->
@@ -60,31 +82,53 @@
         <h2 class="text-3xl font-bold text-gray-800">Features</h2>
         <p class="text-gray-600 mt-4">What makes us unique.</p>
         <div class="feature-card flex flex-wrap mt-8">
-          <div class='feature-img m-2'>
-            <img class="rounded">
+          <div class="feature-img m-2">
+            <img class="rounded" />
           </div>
-            <div class="p-6 mx-auto bg-white">
-              <h3 class="text-xl font-bold text-gray-800">Feature One</h3>
-              <p class="text-gray-600 mt-2">Description of feature one.</p>
-            </div>
+          <div class="p-6 mx-auto bg-white">
+            <h3 class="text-xl font-bold text-gray-800">Feature One</h3>
+            <p class="text-gray-600 mt-2">Description of feature one.</p>
+          </div>
         </div>
       </div>
     </section>
     <section id="contact p-2">
-      <h3 class='text-center font-bold text-3xl'>Contact</h3>
-      <div class="form-container border-2 bg-white mx-auto p-3 m-2">
-      <form>
-        <input placeholder="Name" class="bg-gray-200 rounded p-2 m-2"></input>
-        <input placeholder="Phone" class="bg-gray-200 rounded p-2 m-2" ></input>
-        <input placeholder="Email" class="bg-gray-200 rounded p-2 m-2"></input>
-        <textarea class="bg-gray-200 rounded p-2 m-2"></textarea>
-      </form>
+      <h3 class="text-center font-bold text-3xl">Contact</h3>
+      <div class="form-container border-2 bg-white mx-auto my-8 p-2">
+        <form id="contact-form" class="w-full p-6">
+          <div class="flex flex-wrap justify-center flex-row">
+            <input
+              type="text"
+              placeholder="Name"
+              class="rounded-lg p-2 m-2"
+              required
+            />
+            <input
+              type="tel"
+              placeholder="Phone"
+              class="rounded-lg p-2 m-2"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              class="rounded-lg p-2 m-2"
+              required
+            />
+            <textarea class="bg-gray-200 rounded p-2 m-2" required></textarea>
+            <button
+              class="submit-btn w-full text-white rounded-lg p-2 m-2 bg-green-600"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
     </section>
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6">
       <div class="container mx-auto px-6 text-center">
-        <p>&copy; 2024 Your Company. All rights reserved.</p>
+        <p>Copyright &copy; 2023 Rakini SoftTech.</p>
       </div>
     </footer>
     <script src="src/main.js"></script>
