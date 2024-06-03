@@ -8,7 +8,7 @@
 
 #header {
   width:100%;
-  background-color: white;
+  background-color: #fff9f9;
   position: fixed;
   top: 0;
   display: none;
@@ -52,20 +52,23 @@
 .slideUp{
   animation: slideUp 0.4s ease 1;
 }
+#features{
+  background-color:#5eead4
+}
 
 
 
 .feature-card{
-  max-width: 300px;
-  background-color: white;
-  border-radius: 0px;
-  box-shadow: 0 2px 5px #e3e3e3;
+  max-width: 500px;
+  border-radius: 10px;
+  margin:auto;
 }
 .feature-card .feature-img{
-  background-color: gray;
   width: 100%;
+  
   aspect-ratio: 4/3;
-  border-radius: 0px;
+  border-radius: 10px;
+  
 }
 @keyframes slideUp {
   0% {
