@@ -1,42 +1,101 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-* {
 
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
 
+css
+/* style.css */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
 #header {
   width:100%;
-  background-color: white;
+  background-color: transparent;
+  color:#fff;
   position: fixed;
   top: 0;
-  display: none;
+  left: 0;
   backdrop-filter: blur(3px);
-  animation: slideDown 0.2s ease 1;
   z-index: 4;
+  transition: 0.2s;
 }
+
+#header .menu-icon{
+  display: none;
+}
+#header #nav-bar a {
+  color: black;
+  padding: 10px;
+  transition: color 0.3s ease; /* Add a transition for smooth color change */
+}
+
+#header nav a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
 #header h1{
-  background: linear-gradient(110deg, rgba(22, 140, 250, 1), rgba(123, 255, 123, 1) );
+  background: linear-gradient(110deg, rgb(4, 132, 252), rgb(51, 253, 51) );
   background-position:center;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  border:1px solid red;
+  background-clip: text;
+  display: none;
+}
+#side-nav{
+  width: 20rem;
+  height: 100vh;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  transform: translateX(-100%);
+  transition: 0.3s ease;
+  display: none;
+}
+#side-nav h1{
+  background: linear-gradient(110deg, rgb(4, 132, 252), rgb(51, 253, 51) );
+  background-position:center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+#side-nav a{
+  color: black;
+  padding: 10px;
+  transition: color 0.3s ease; /* Add a transition for smooth color change */
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+}
+
+#side-nav a:hover {
+  background-color: #e8f2ff;
+  color: #007bff; /* Change color on hover */
 }
 #home {
   position: relative;
   width: 100vw;
   min-height: 100vh;
   background-image:
-  linear-gradient(110deg, rgba(22, 140, 250, 0.9), rgba(123, 255, 123, 0.7)),
+  linear-gradient(110deg, rgba(22, 140, 250, 0.9), rgba(123, 255, 123, 0.6)) ,
   url('bg1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
 }
-.headline-container{
-}
+
 .hero-img {
   max-width: calc(20rem + 2vw);
   width: 100%;
@@ -67,6 +126,22 @@
   aspect-ratio: 4/3;
   border-radius: 0px;
 }
+.form-container{
+  background-color: white;
+  max-width: 330px;
+  border-radius: 10px;
+
+}
+#contact-form input, #contact-form textarea{
+  width: 90%;
+  background-color: #fff;
+  border: 0.1rem solid #e3e3e3;
+  outline: none;
+}
+#contact-form input:focus, #contact-form textarea:focus{
+  border: 0.1rem solid #02085f;
+  outline: 0.12rem solid #069bff;
+}
 @keyframes slideUp {
   0% {
     opacity: 0;
@@ -91,9 +166,20 @@
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
     #home {
-    min-height: 80vh;
+    min-height: 100vh;
+    max-height: 100vh;
     flex-direction: column!important;
   }
+  #header nav{
+    display: none;
+  }
+  #header .menu-icon{
+    display: block;
+  }
+  #side-nav{
+    display: block;
+  }
+     
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -103,7 +189,7 @@
     flex-direction: column!important;
   }
 }
-@media (min-width: 576px) and (orientation:portrait){
+@media (min-width: 578px ) and (max-width: 767.98px) and (orientation: portrait){
   #home {
     max-height:50vh;
     flex-direction: column!important;
