@@ -16,6 +16,7 @@
     />
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
+
   <body class="bg-white font-sans">
     <!-- Header -->
     <header id="header" class="flex justify-between items-center p-[5px]">
@@ -25,29 +26,31 @@
           <h1 class="p-2 text-2xl font-bold">Rakini</h1>
         </div>
 
-      <nav id="nav-bar" class="flex items-center font-bold">
-     <a href="#home">Home</a>
-     <a href="#features">Features</a>
-     <a href="#contact">Contact</a>
-     <a href="#about">About Us</a> 
-    
-   </nav>
+        <nav id="nav-bar" class="flex items-center font-bold">
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About Us</a>
+        </nav>
       </div>
     </header>
     <div id="side-nav" class="">
       <h1 class="font-bold text-2xl p-4">Rakini</h1>
       <div class="flex flex-col">
-      <a href="#home">Home</a>
-      <a href="#features">Features</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About Us</a> 
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About Us</a>
       </div>
     </div>
     <!-- Hero Section -->
+
     <section
       id="home"
       class="bg-gray-200 px-4 pt-20 flex justify-around items-center"
     >
+      <!-- partial -->
+
       <div class="headline-container m-4 flex flex-col text-left">
         <h1 class="slide-up-animation text-4xl text-white font-bold">
           Rakini SoftTech
@@ -77,25 +80,20 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20">
+    <section id="features" class="py-20 bg-white">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold text-gray-800">Features</h2>
         <p class="text-gray-600 mt-4">What makes us unique.</p>
-        <div class="feature-card flex flex-wrap mt-8">
-          <div class="feature-img m-2">
-            <img class="rounded" />
+        <div class="feature-card-container flex justify-center mt-8">
           </div>
-          <div class="p-6 mx-auto bg-white">
-            <h3 class="text-xl font-bold text-gray-800">Feature One</h3>
-            <p class="text-gray-600 mt-2">Description of feature one.</p>
-          </div>
-        </div>
       </div>
     </section>
     <section id="contact p-2">
+
+      <div id="tsparticles"></div>
       <h3 class="text-center font-bold text-3xl">Contact</h3>
-      <div class="form-container border-2 bg-white mx-auto my-8 p-2">
-        <form id="contact-form" class="w-full p-6">
+      <div class="form-container shadow bg-white mx-auto my-8 p-2">
+        <form id="contact-form" class="w-full p-2">
           <div class="flex flex-wrap justify-center flex-row">
             <input
               type="text"
@@ -127,10 +125,40 @@
     </section>
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6">
-      <div class="container mx-auto px-6 text-center">
-        <p>Copyright &copy; 2023 Rakini SoftTech.</p>
+      <div class="flex justify-around items-start sm:flex-col md:flex-row">
+        <div class="social-media">
+          <p>Social Media</p>
+          <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <a href="https://www.whatsapp.com/" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="services">
+          <p class="font-bold">Services</p>
+          <ul class="font-light">
+            <li>Web development</li>
+            <li>App development</li>
+            <li>Software development</li>
+            <li>Networking</li>
+            <li>Cloud computing</li>
+            <li>Data analytics</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright text-center mt-6">
+        <p>&copy; 2023 Rakini SoftTech. All rights reserved.</p>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/tsparticles.all.bundle.min.js"></script>
+    <script src="./script.js"></script>
     <script src="src/main.js"></script>
+    <script src="src/script.js"></script>
   </body>
 </html>
