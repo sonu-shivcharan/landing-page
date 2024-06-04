@@ -93,5 +93,5 @@ node_modules
 .idea
 .vscode
 .DS_Store
-dist
+
 node_modules

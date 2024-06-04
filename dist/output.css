@@ -47,7 +47,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -672,6 +672,10 @@ video {
   justify-content: space-around;
 }
 
+.gap-20 {
+  gap: 5rem;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -1027,6 +1031,12 @@ html{
   #side-nav{
     display: block;
   }
+
+  #footer .links{
+    flex-direction: column!important;
+    padding: 1rem;
+    gap: 1rem;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -1063,6 +1073,20 @@ html{
 
 @media (min-width: 1200px) {
   /* Styles for extra large devices */
+}
+
+#footer h4{
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+#footer a:hover{
+  color: #069bff;
+}
+
+#footer a{
+  transition: 400ms;
 }
 
 .hover\:bg-blue-500:hover {
