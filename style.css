@@ -182,7 +182,11 @@ html{
   #side-nav{
     display: block;
   }
-     
+  #footer .links{
+    flex-direction: column!important;
+    padding: 1rem;
+    gap: 1rem;
+  }
 }
 
 
@@ -193,6 +197,7 @@ html{
     max-height: 100vh;
     flex-direction: column !important;
   }
+  
 }
 
 /* Small devices (portrait phones, 578px and up) */
@@ -214,3 +219,22 @@ html{
 @media (min-width: 992px) and (max-width: 1199.98px) {
   /* Styles for large devices */
 }
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Styles for extra large devices */
+}
+#footer h4{
+font-weight: bold; 
+margin-bottom: 15px;
+font-size: 20px;
+}
+
+#footer a:hover{
+color: #069bff;
+}
+#footer a{
+  transition: 400ms;
+}
+
