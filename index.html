@@ -16,6 +16,7 @@
     />
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
+
   <body class="bg-white font-sans">
     <!-- Header -->
     <header id="header" class="flex justify-between items-center p-[5px]">
@@ -43,10 +44,13 @@
       </div>
     </div>
     <!-- Hero Section -->
+
     <section
       id="home"
       class="bg-gray-200 px-4 pt-20 flex justify-around items-center"
     >
+      <!-- partial -->
+
       <div class="headline-container m-4 flex flex-col text-left">
         <h1 class="slide-up-animation text-4xl text-white font-bold">
           Rakini SoftTech
@@ -76,25 +80,20 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20">
+    <section id="features" class="py-20 bg-white">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold text-gray-800">Features</h2>
         <p class="text-gray-600 mt-4">What makes us unique.</p>
-        <div class="feature-card flex flex-wrap mt-8">
-          <div class="feature-img m-2">
-            <img class="rounded" />
+        <div class="feature-card-container flex justify-center mt-8">
           </div>
-          <div class="p-6 mx-auto bg-white">
-            <h3 class="text-xl font-bold text-gray-800">Feature One</h3>
-            <p class="text-gray-600 mt-2">Description of feature one.</p>
-          </div>
-        </div>
       </div>
     </section>
     <section id="contact p-2">
+
+      <div id="tsparticles"></div>
       <h3 class="text-center font-bold text-3xl">Contact</h3>
-      <div class="form-container border-2 bg-white mx-auto my-8 p-2">
-        <form id="contact-form" class="w-full p-6">
+      <div class="form-container shadow bg-white mx-auto my-8 p-2">
+        <form id="contact-form" class="w-full p-2">
           <div class="flex flex-wrap justify-center flex-row">
             <input
               type="text"
@@ -125,6 +124,7 @@
       </div>
     </section>
     <!-- Footer -->
+
     <footer id="footer"class="bg-gray-800 text-white py-6">
       <div class="links flex justify-around flex-wrap gap-20">
         <div class="flex flex-col ">
@@ -170,8 +170,12 @@
       </div>
       <div class="container mx-auto px-6 text-center mt-6">
         <p>Copyright &copy; 2023 Rakini SoftTech.</p>
+
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/tsparticles.all.bundle.min.js"></script>
+    <script src="./script.js"></script>
     <script src="src/main.js"></script>
+    <script src="src/script.js"></script>
   </body>
 </html>
