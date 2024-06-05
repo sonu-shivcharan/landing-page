@@ -1031,7 +1031,17 @@ html{
     transform: translate(0%);
   }
 }
+@keyframes slideUp{
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
 
+  100% {
+    transform: translate(0%);
+    opacity: 1;
+  }
+}
 @keyframes slideDown {
   0% {
     transform: translateY(-100%);
