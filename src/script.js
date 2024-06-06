@@ -25,7 +25,7 @@ tsParticles.load({
     interactivity: {
       detectsOn: "window",
       events: {
-        onClick: { enable: true, mode: "push" },
+        onClick: { enable: false, mode: "push" },
         onDiv: { selectors: [], enable: false, mode: [], type: "circle" },
         onHover: {
           enable: true,

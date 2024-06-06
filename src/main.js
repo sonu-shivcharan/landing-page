@@ -1,5 +1,5 @@
-const select = (elem)=>document.querySelector(elem);
-const selectAll = (elem)=>document.querySelectorAll(elem);
+const select = (elem) => document.querySelector(elem);
+const selectAll = (elem) => document.querySelectorAll(elem);
 const header = select("#header");
 const home = select("#home");
 const navBar = select("#header #nav-bar");
@@ -7,44 +7,8 @@ const elements = selectAll(".headline-container .slide-up-animation");
 const menuIcon = select("#header .menu-icon");
 const sidenav = select("#side-nav");
 const featureCardContainer = select(".feature-card-container");
-let featureCards = [];
-for (let i = 0; i < 5; i++) {
-  featureCards.push( `<div class="feature-card flex flex-wrap">
-  <div class="feature-img m-2">
-    <img class="rounded" src="" alt="Feature ${i + 1}"> 
-  </div>
-  <div class="p-6 mx-auto bg-white">
-    <h3 class="text-xl font-bold text-gray-800">Feature One</h3>
-    <p class="text-gray-600 mt-2">Description of feature one.</p>
-  </div>
-</div>`);
-}
-changeFeatureCard(0);
-
-function changeFeatureCard(currentCardIdx){
-    featureCardContainer.innerHTML = featureCards[currentCardIdx]; 
-    const currentCard = featureCardContainer.querySelector(".feature-card");
-     
-    console.log(featureCards);
-    setTimeout(() => {
-      currentCard.style.transform = "translateX(-100%)";
-      currentCard.style.opacity = "0";
-    }, 4000);
-    setTimeout(() => {
-      featureCardContainer.removeChild(currentCard);
-      currentCardIdx = (currentCardIdx +1) % (featureCards.length);
-      changeFeatureCard(currentCardIdx);
-    }, 4000);
-    
-
-}
-
-
-
-
-
-
-
+const serviceCardContainer = select("#service-card-container");   
+let scrollTop = 0;
 menuIcon.onclick = () => {
   sidenav.style.transform = "translateX(0%)";
 };
@@ -55,22 +19,18 @@ document.addEventListener("click", (e) => {
 });
 
 for (let elem of elements) {
-  elem.style.opacity = '0';
+  elem.style.opacity = "0";
 }
 function slideUpAnimation() {
   for (let i = 0; i < elements.length; i++) {
-    elements[i].style.animation = `slideUp ${0.3*(i+0.6)}s ease-out 1`
-    elements[i].style.opacity = '1';
+    elements[i].style.animation = `slideUp ${0.3 * (i + 0.6)}s ease-out 1`;
+    elements[i].style.opacity = "1";
   }
 }
-
-window.addEventListener("load", slideUpAnimation)
-
-
 function handleScroll() {
   const title = header.getElementsByTagName("h1")[0];
-  const scrollTop = window.scrollY;
-
+  scrollTop = window.scrollY;
+console.log(scrollTop);
   if (scrollTop >= 100) {
     // Show the title and change header styles for scrolled state
     title.style.display = "block";
@@ -83,5 +43,79 @@ function handleScroll() {
     header.style.color = "#fff";
   }
 }
+function getServises() {
+  fetch("./assests/services.json")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      renderServices(data);
+    });
+}
 
+function renderServices({ services }) {
+  services.forEach((service, index) => {
+    const createCard = document.createElement("div");
+
+    if (index % 2 == 0) {
+      createCard.classList.add("service-card", "flex", "flex-row");
+    } else {
+      createCard.classList.add("service-card", "flex", "flex-row-reverse");
+    }
+    const image = document.createElement("div");
+    image.classList.add("image");
+    image.style.backgroundImage = `url(${service.image})`;
+    const description = document.createElement("div");
+    description.classList.add(
+      "description",
+      "p-6",
+      "flex",
+      "flex-col",
+      "justify-center"
+    );
+    const title = document.createElement("h4");
+    title.classList.add("text-2xl", "text-green-400", "font-bold");
+    title.textContent = service.title;
+    const text = document.createElement("p");
+    text.classList.add("text-gray-600");
+    text.textContent = service.description;
+    description.appendChild(title);
+    description.appendChild(text);
+    createCard.appendChild(image);
+    createCard.appendChild(description);
+    serviceCardContainer.appendChild(createCard);
+  });
+  window.addEventListener(
+    "scroll",
+    addAnimationClassToServicse
+  )
+}
+function addAnimationClassToServicse(){
+  const heroHeight = home.offsetHeight;
+  const serviceCards = serviceCardContainer.querySelectorAll(".service-card");
+  if (scrollTop >= heroHeight-200) {
+    serviceCards.forEach((card, index) => {
+      if (index % 2) {
+        // card.querySelector(".image").classList.add(`${scrollTop>=heroHeight-(200*(index+1))?"slideRight":"shiftLeft"}`);
+        card.querySelector(".image").classList.add("slideRight");
+        card.querySelector(".image").classList.remove("shiftLeft");
+      } else {
+        card.querySelector(".image").classList.add("slideLeft");
+        card.querySelector(".image").classList.remove("shiftRight");
+      }
+    });
+  } else{
+    serviceCards.forEach((card, index) => {
+      if (index % 2) {
+        card.querySelector(".image").classList.remove("slideRight");
+        card.querySelector(".image").classList.add("shiftLeft");
+      } else {
+        card.querySelector(".image").classList.remove("slideLeft");
+        card.querySelector(".image").classList.add("shiftRight");
+      }
+    });
+  }
+}
 window.addEventListener("scroll", handleScroll);
+window.addEventListener("load", slideUpAnimation);
+window.addEventListener("load", getServises);
+ 

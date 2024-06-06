@@ -108,24 +108,25 @@ html{
   animation: slideUp 0.4s ease 1;
 }
 
-.feature-card-container{
-  max-width: 600px; /* Adjust as needed */
-  overflow-x: auto;
-  scroll-behavior: smooth;
+#services{
+  min-height: 50vh;
+  width: 100%;
+  padding: 2rem ;
+}
+.service-card{
+  width: calc(250px + 20vw);
+  border-radius: 1rem;
+  margin: 1rem;
   overflow: hidden;
 }
-.feature-card {
-  min-width: 300px; /* Adjust as needed */
-  margin-right: 1rem; /* Adjust spacing as needed */
-  transition: 0.3s ease;
-  animation: slideLeft 0.3s ease 1;
-}
-
-.feature-card .feature-img{
-  background-color: gray;
+.service-card .image{
   width: 100%;
-  aspect-ratio: 4/3;
-  border-radius: 0px;
+  aspect-ratio: 6/4;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  transition: 0.3s;
 }
 .form-container{
   background-color: white;
@@ -146,9 +147,39 @@ html{
 #contact {
   overflow: hidden;
 }
+
+.slideLeft{
+  animation: slideLeft 0.8s ease 1;
+}
+.slideRight{
+  animation: slideRight 0.8s ease 1;
+}
+.slideUp{
+  animation: slideUp 0.8s ease 1;
+}
+.shiftLeft{
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.shiftRight{
+  transform: translateX(100%);
+  opacity: 0;
+}
+
 @keyframes slideLeft {
   0% {
-    transform: translateX(100%);
+    opacity: 0;
+    transform: translateX(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0%);
+  }
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-50%);
   }
 
   100% {
@@ -158,12 +189,10 @@ html{
 @keyframes slideUp{
   0% {
     transform: translateY(100%);
-    opacity: 0;
   }
 
   100% {
     transform: translate(0%);
-    opacity: 1;
   }
 }
 
@@ -194,6 +223,14 @@ html{
   #side-nav{
     display: block;
   }
+  .service-card{
+    min-width: calc(230px + 10vw);
+    flex-direction: column;
+  }
+  .service-card .image{
+    width: 100%;
+    aspect-ratio: 4/3;
+  }
   #footer .links{
     flex-direction: column!important;
     padding: 1rem;
@@ -201,7 +238,17 @@ html{
   }
 }
 
-
+@media (min-width: 576px){
+  .service-card{
+    max-width: calc(500px + 30vw);
+    width: 100%;
+  }
+  .service-card .image{
+    min-width: 400px;
+    aspect-ratio: 4/3;
+  }
+  
+}
 /* Small devices (landscape phones, 5
 76px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
