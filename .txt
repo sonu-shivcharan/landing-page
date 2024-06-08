@@ -1,0 +1,26 @@
+
+let featureCards = [];
+for (let i = 0; i < 5; i++) {
+  featureCards.push( `
+  <div class="feature-card flex flex-col justify-center border shadow-md rounded-lg my-5">
+  <div class="feature-img bg-cover bg-center" style="background-image: url('https://picsum.photos/200/300?random=${i+1}">
+    
+  </div>
+  <div class="">
+    <h3 class="">Feature One</h3>
+    <p class="">Description of feature ${i+1}.</p>
+  </div>
+</div>`);
+}
+changeFeatureCard(0);
+
+function changeFeatureCard(currentCardIdx){
+    featureCardContainer.innerHTML = featureCards[currentCardIdx]; 
+    const currentCard = featureCardContainer.querySelector(".feature-card");
+    setTimeout(() => {
+      currentCard.style.transform = "translateX(-100%)";
+      currentCardIdx = (currentCardIdx +1) % (featureCards.length);
+      changeFeatureCard(currentCardIdx);
+    },4000);
+}
+

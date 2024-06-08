@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+
+    <!--<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="./dist/output.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-white font-sans">
+    <!-- Header -->
+    <header id="header" class="flex justify-between items-center p-[5px]">
+      <div class="container mx-auto px-2 flex justify-between items-center">
+        <div class="flex items-center">
+          <i class="menu-icon fa-solid fa-bars text-2xl p-2"></i>
+          <h1 class="p-2 text-2xl font-bold">Rakini</h1>
+        </div>
+
+        <nav id="nav-bar" class="flex items-center font-bold">
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About Us</a>
+        </nav>
+      </div>
+    </header>
+    <div id="side-nav" class="">
+      <h1 class="font-bold text-2xl p-4">Rakini</h1>
+      <div class="flex flex-col">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About Us</a>
+      </div>
+    </div>
+    <!-- Hero Section -->
+
+    <section
+      id="home"
+      class="bg-gray-200 px-4 pt-20 flex justify-around items-center"
+    >
+      <!-- partial -->
+
+      <div class="headline-container m-4 flex flex-col text-left">
+        <h1 class="slide-up-animation text-4xl text-white font-bold">
+          Rakini SoftTech 
+        </h1>
+        <h4 class="slide-up-animation font-bold text-white text-2xl">
+          Your Gateway to Innovative Tech Solution
+        </h4>
+        <h4 class="slide-up-animation text-gray-600 mt-6 font-bold">
+          Transforming Businesses with Cutting-Edge Technology Services
+        </h4>
+
+        <div class="my-8 flex flex-wrap action-btn-container">
+          <a
+            href="#features"
+            class="slide-up-animation bg-blue-500 p-3 rounded-lg mx-2 mt-2 border-2 border-blue-500 text-white font-bold hover:bg-transparent duration-200"
+          >
+            Learn More
+          </a>
+          <a
+            href="#fs"
+            class="slide-up-animation bg-transparent p-3 rounded-lg mx-2 mt-2 border-2 border-blue-500 text-white font-bold hover:bg-blue-500 duration-200"
+            >Get In Touch</a
+          >
+        </div>
+      </div>
+      <div class="hero-img rounded-lg border-2 border-blue-300 bg-white"></div>
+    </section>
+    <section id="services" class="bg-gray-200">
+      <h2 class="text-2xl font-bold text-center py-4">Services</h2>
+      <div id="service-card-container" class="flex justify-center flex-wrap">
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-10 bg-gray-100">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-800">Features</h2>
+        <p class="text-gray-600 mt-4">What makes us unique.</p>
+        <div class="feature-card-container flex justify-center"></div>
+      </div>
+    </section>
+    <section id="contact p-2">
+      <div id="tsparticles">
+        <h3 class="text-center font-bold text-3xl">Contact</h3>
+        <div class="form-container shadow bg-white mx-auto my-8 p-2">
+          <form id="contact-form" class="w-full p-2">
+            <div class="flex flex-wrap justify-center flex-row">
+              <input
+                type="text"
+                placeholder="Name"
+                class="rounded-lg p-2 m-2"
+                required
+              />
+              <input
+                type="tel"
+                placeholder="Phone"
+                class="rounded-lg p-2 m-2"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                class="rounded-lg p-2 m-2"
+                required
+              />
+              <textarea class="bg-gray-200 rounded p-2 m-2" required></textarea>
+              <button
+                class="submit-btn w-full text-white rounded-lg p-2 m-2 bg-green-600"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+
+    <footer id="footer" class="bg-gray-800 text-white py-6">
+      <div class="links flex justify-around flex-wrap gap-20">
+        <div class="flex flex-col">
+          <h4>Company</h4>
+          <a> About Us</a>
+          <a> Mission & Vision Career</a>
+        </div>
+        <div class="flex flex-col">
+          <h4>Development</h4>
+          <a>Web development </a>
+          <a>App Development</a>
+          <a> Softwere Development</a>
+          <a>Cloude computing</a>
+          <a>Networking</a>
+          <a>Data analysis</a>
+        </div>
+        <div class="flex flex-col">
+          <h4>Design & Marketing</h4>
+          <a>Web design</a>
+          <a> Digital Marketing</a>
+          <a> Graphics Design</a>
+        </div>
+        <div class="flex flex-col">
+          <h4>Quick link</h4>
+          <a> Blog </a>
+          <a>Contact</a>
+          <div class="flex-col">
+            <a> <i class="fa-brands fa-facebook"></i></a>
+            <a><i class="fa-brands fa-whatsapp m-2"></i></a>
+            <a><i class="fa-brands fa-instagram"></i> </a>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <h4>Address</h4>
+          <h5><i class="fa-solid fa-phone"></i> +91 9067702053</h5>
+          <a><i class="fa-solid fa-globe"></i> rakinisofttech.com</a>
+          <h5>
+            <i class="fa-solid fa-location-dot"></i> Pimpale Gaurav,<br />
+            Pune 411018
+          </h5>
+        </div>
+      </div>
+      <hr />
+      <div class="flex justify-center text-4xl">Rakini Softtech</div>
+      <div class="container mx-auto px-6 text-center mt-6">
+        <p>Copyright &copy; 2023 Rakini SoftTech.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/tsparticles.all.bundle.min.js"></script>
+    <script src="src/main.js"></script>
+    <script src="src/script.js"></script>
+  </body>
+</html>

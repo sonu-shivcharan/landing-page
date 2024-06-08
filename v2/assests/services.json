@@ -1,0 +1,18 @@
+{
+  "services": [
+    {
+      "image": "./images/web.jpg",
+      "title": "Web Development",
+      "description": "We create stunning and user-friendly websites that are tailored to your business needs."
+    },{
+      "image": "./images/app-dev.jpg",
+      "title": "App Development",
+      "description": "We build cross-platform mobile applications for iOS and Android, tailored to your specific business needs."
+    },
+    {
+      "image": "./images/cloud-compute.jpg",
+      "title": "Cloud Computing",
+      "description": "We provide scalable and secure cloud solutions to help businesses of all sizes migrate and manage their infrastructure in the cloud."
+    }
+  ]
+}
