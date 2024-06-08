@@ -19,7 +19,6 @@ html{
 #header {
   width:100%;
   background-color: transparent;
-  color:#fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -28,6 +27,7 @@ html{
 }
 
 #header .menu-icon{
+  color: black;
   display: none;
 }
 #header #nav-bar a {
@@ -83,12 +83,15 @@ html{
 #home {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  background-image:
-  linear-gradient(110deg, rgba(22, 140, 250, 0.9), rgba(123, 255, 123, 0.5));
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 100vh;
+  background-image: url('./bg.jpg');
+}
+.headline-container h1{
+  background: linear-gradient(35deg, rgb(4, 132, 252), rgb(51, 255,51 ) );
+  background-position:center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text; 
 }
 .hero-img {
   max-width: calc(20rem + 2vw);
@@ -99,9 +102,23 @@ html{
 .action-btn-container {
   width: 100%;
 }
-.action-btn-containe button {
-  border-radius: 50%;
+.action-btn-container a{
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  font-weight: bold;
 }
+.action-btn-container button{
+  background: linear-gradient(35deg, rgb(4, 132, 252), rgb(50, 255, 50) );
+  height: 55px;
+  border-radius: 15px;
+  padding: 3px;
+  margin: 0.5rem;
+  margin: 10px;
+}
+
 .slideUp{
   animation: slideUp 0.4s ease 1;
 }

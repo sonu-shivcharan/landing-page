@@ -7,7 +7,7 @@ const elements = selectAll(".headline-container .slide-up-animation");
 const menuIcon = select("#header .menu-icon");
 const sidenav = select("#side-nav");
 const featureCardContainer = select(".feature-card-container");
-const serviceCardContainer = select("#service-card-container");   
+const serviceCardContainer = select("#service-card-container");
 let scrollTop = 0;
 menuIcon.onclick = () => {
   sidenav.style.transform = "translateX(0%)";
@@ -21,16 +21,18 @@ document.addEventListener("click", (e) => {
 for (let elem of elements) {
   elem.style.opacity = "0";
 }
-function slideUpAnimation() {
-  for (let i = 0; i < elements.length; i++) {
-    elements[i].style.animation = `slideUp ${0.3 * (i + 0.6)}s ease-out 1`;
-    elements[i].style.opacity = "1";
-  }
+function slideUpAnimation(idx) {
+  if(idx>elements.length-1) return;
+  elements[idx].style.animation = `slideUp 0.5s ease 1`;
+  elements[idx].style.opacity = "1";
+  setTimeout(() => {
+    slideUpAnimation(idx + 1);
+  }, 150);
 }
 function handleScroll() {
   const title = header.getElementsByTagName("h1")[0];
   scrollTop = window.scrollY;
-console.log(scrollTop);
+
   if (scrollTop >= 100) {
     // Show the title and change header styles for scrolled state
     title.style.display = "block";
@@ -47,7 +49,6 @@ function getServises() {
   fetch("./assests/services.json")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       renderServices(data);
     });
 }
@@ -84,38 +85,31 @@ function renderServices({ services }) {
     createCard.appendChild(description);
     serviceCardContainer.appendChild(createCard);
   });
-  window.addEventListener(
-    "scroll",
-    addAnimationClassToServicse
-  )
+  window.addEventListener("scroll", addAnimationClassToServicse);
 }
-function addAnimationClassToServicse(){
+function addAnimationClassToServicse() {
   const heroHeight = home.offsetHeight;
   const serviceCards = serviceCardContainer.querySelectorAll(".service-card");
-  if (scrollTop >= heroHeight-200) {
-    serviceCards.forEach((card, index) => {
-      if (index % 2) {
-        // card.querySelector(".image").classList.add(`${scrollTop>=heroHeight-(200*(index+1))?"slideRight":"shiftLeft"}`);
-        card.querySelector(".image").classList.add("slideRight");
-        card.querySelector(".image").classList.remove("shiftLeft");
-      } else {
-        card.querySelector(".image").classList.add("slideLeft");
-        card.querySelector(".image").classList.remove("shiftRight");
-      }
-    });
-  } else{
-    serviceCards.forEach((card, index) => {
-      if (index % 2) {
-        card.querySelector(".image").classList.remove("slideRight");
-        card.querySelector(".image").classList.add("shiftLeft");
-      } else {
-        card.querySelector(".image").classList.remove("slideLeft");
-        card.querySelector(".image").classList.add("shiftRight");
-      }
-    });
-  }
+  const screenHeight10 = window.innerHeight*0.4;//40% of screen height
+  const threshold = heroHeight-200; 
+if (scrollTop >= threshold) {
+  serviceCards.forEach((card, index) => {
+    const isEven = index % 2 === 0;
+    const slideClass = isEven ? "slideLeft" : "slideRight";
+    const shouldSlide = scrollTop >= threshold + (index * screenHeight10);
+    console.table(scrollTop, threshold, index * screenHeight10,  (scrollTop >= threshold + (index * screenHeight10))?"true":"false", card.innerText)
+    card.querySelector(".image").classList.add(slideClass, shouldSlide);
+    card.style.opacity = 1; 
+  });
+} else {
+  serviceCards.forEach((card) => {
+    card.style.opacity = 0;
+    card.querySelector(".image").classList.remove("slideRight", "slideLeft");
+  });
+}
+
+
 }
 window.addEventListener("scroll", handleScroll);
-window.addEventListener("load", slideUpAnimation);
+window.addEventListener("load", ()=>{slideUpAnimation(0)});
 window.addEventListener("load", getServises);
- 

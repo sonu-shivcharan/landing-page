@@ -17,7 +17,7 @@
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-white font-sans">
+  <body class="">
     <!-- Header -->
     <header id="header" class="flex justify-between items-center p-[5px]">
       <div class="container mx-auto px-2 flex justify-between items-center">
@@ -47,7 +47,7 @@
 
     <section
       id="home"
-      class="bg-gray-200 px-4 pt-20 flex justify-around items-center"
+      class="px-4 pt-20 flex justify-around items-center"
     >
       <!-- partial -->
 
@@ -55,7 +55,7 @@
         <h1 class="slide-up-animation text-4xl text-white font-bold">
           Rakini SoftTech 
         </h1>
-        <h4 class="slide-up-animation font-bold text-white text-2xl">
+        <h4 class="slide-up-animation font-bold text-gray-600 text-2xl">
           Your Gateway to Innovative Tech Solution
         </h4>
         <h4 class="slide-up-animation text-gray-600 mt-6 font-bold">
@@ -63,17 +63,22 @@
         </h4>
 
         <div class="my-8 flex flex-wrap action-btn-container">
-          <a
+          
+        <button class="slide-up-animation">
+        <a
             href="#features"
-            class="slide-up-animation bg-blue-500 p-3 rounded-lg mx-2 mt-2 border-2 border-blue-500 text-white font-bold hover:bg-transparent duration-200"
+            class="slide-up-animation text-white"
           >
             Learn More
           </a>
+        </button>
+          <button class="slide-up-animation">
           <a
             href="#fs"
-            class="slide-up-animation bg-transparent p-3 rounded-lg mx-2 mt-2 border-2 border-blue-500 text-white font-bold hover:bg-blue-500 duration-200"
+            class="bg-white text-blue-500 hover:bg-transparent  hover:text-white hover:scale-110 transition-all duration-300 ease-in-out"
             >Get In Touch</a
           >
+        </button>
         </div>
       </div>
       <div class="hero-img rounded-lg border-2 border-blue-300 bg-white"></div>
@@ -177,8 +182,6 @@
         <p>Copyright &copy; 2023 Rakini SoftTech.</p>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/tsparticles.all.bundle.min.js"></script>
     <script src="src/main.js"></script>
-    <script src="src/script.js"></script>
   </body>
 </html>

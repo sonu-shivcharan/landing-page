@@ -623,12 +623,20 @@ video {
   margin-top: 1.5rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .block {
   display: block;
 }
 
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .w-full {
@@ -783,6 +791,16 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .pt-20 {
@@ -980,14 +998,14 @@ html{
 #services{
   min-height: 50vh;
   width: 100%;
-  padding: 2rem ;
+  padding: 2.5rem ;
 }
 
 .service-card{
-  width: calc(250px + 20vw);
+  width: calc(250px + 10vw);
   border-radius: 1rem;
   margin: 1rem;
-  overflow: hidden;
+  transition: 0.3s;
 }
 
 .service-card .image{
@@ -997,7 +1015,7 @@ html{
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 1rem;
-  transition: 0.3s;
+  transition: 0.8s;
 }
 
 .form-container{
@@ -1128,6 +1146,19 @@ html{
   .service-card{
     max-width: calc(500px + 30vw);
     width: 100%;
+  }
+
+  .service-card .image{
+    min-width: 400px;
+    aspect-ratio: 4/3;
+  }
+}
+
+@media (min-width: 576px) and (orientation: portrait){
+  .service-card{
+    max-width: calc(500px + 30vw);
+    width: 100%;
+    height: 50vh;
   }
 
   .service-card .image{
