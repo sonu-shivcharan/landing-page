@@ -97,10 +97,13 @@ html{
   box-shadow: 4px 4px 0px rgb(106, 183, 255);
 }
 .action-btn-container {
-  width: 100%;
+  width: 70%;
+  margin: auto;
+  flex-direction: row;
+  text-align: center;
 }
-.action-btn-containe button {
-  border-radius: 50%;
+.action-btn-container a {
+  min-width: 200px;
 }
 .slideUp{
   animation: slideUp 0.4s ease 1;
@@ -130,7 +133,6 @@ html{
   background-color: white;
   max-width: 300px;
   border-radius: 10px;
-
 }
 #contact-form input, #contact-form textarea{
   width: 90%;
@@ -167,7 +169,7 @@ html{
 @keyframes slideLeft {
   0% {
     opacity: 0;
-    transform: translateX(50%);
+    transform: translateX(30%);
   }
 
   100% {
@@ -177,7 +179,7 @@ html{
 }
 @keyframes slideRight {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(-30%);
   }
 
   100% {
@@ -220,6 +222,9 @@ html{
   }
   #side-nav{
     display: block;
+  }
+  .action-btn-container{
+    flex-direction: column;
   }
   .service-card{
     min-width: calc(230px + 10vw);

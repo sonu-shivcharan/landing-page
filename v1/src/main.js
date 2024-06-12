@@ -93,36 +93,24 @@ function renderServices( {
 function addAnimationClassToServicse() {
   const heroHeight = home.offsetHeight;
   const serviceCards = serviceCardContainer.querySelectorAll(".service-card");
-  const screenHeight10 = window.innerHeight*0.4; //40% of screen height
-  const threshold = heroHeight-200;
-  /*
-  if (scrollTop >= threshold) {
-    serviceCards.forEach((card, index) => {
-      const isEven = index % 2 === 0;
-      const slideClass = isEven ? "slideLeft": "slideRight";
-      const shouldSlide = scrollTop >= threshold + (index * screenHeight10);
-      console.table(scrollTop, threshold, index * screenHeight10, (scrollTop >= threshold + (index * screenHeight10))?"true": "false", card.innerText)
-      card.querySelector(".image").classList.toggle(slideClass, shouldSlide);
-    });
-  } else {
-    serviceCards.forEach((card) => {
-      card.querySelector(".image").classList.remove("slideRight", "slideLeft");
-    });
-  }
-*/
-  for (let i=0; i<serviceCards.length; i++) {
-    const isEven = (i+1) % 2 === 0;
-    const slideClass = isEven ? "slideUp": "slideUp";
-    const shouldSlide = scrollTop>= (threshold+((i+1)*screenHeight10));
-    const cardImage = serviceCards[i].querySelector(".image");
-    if(shouldSlide){
-      cardImage.classList.add(slideClass);
-      cardImage.style.opacity=1;
-    }else{
-      cardImage.classList.remove(slideClass);
-      cardImage.style.opacity=0;
-    }
-  }
+  const screenHeight10 = window.innerHeight*0.4;//40% of screen height
+  const threshold = heroHeight-400; 
+if (scrollTop >= threshold) {
+  serviceCards.forEach((card, index) => {
+    const isEven = (index+1) % 2 === 0;
+    const slideClass = isEven ? "slideLeft" : "slideRight";
+    const shouldSlide = scrollTop >= threshold + ((index+1) * screenHeight10);
+    card.querySelector(".image").classList.add(shouldSlide?slideClass:"");
+    card.style.opacity=1;
+  });
+} else {
+  serviceCards.forEach((card) => {
+    card.querySelector(".image").classList.remove("slideRight", "slideLeft");
+    card.style.opacity=0;
+  });
+}
+
+
 
 }
 window.addEventListener("scroll", handleScroll);
