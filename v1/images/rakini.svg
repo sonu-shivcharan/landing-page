@@ -8,6 +8,7 @@
       text {
         font-family: 'Poppins', sans-serif;
         font-size: 40px;
+        font-weight:bold;
         fill: url(#textGradient);
       }
     </style>
