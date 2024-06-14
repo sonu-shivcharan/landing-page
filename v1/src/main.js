@@ -2,6 +2,7 @@ const select = (elem) => document.querySelector(elem);
 const selectAll = (elem) => document.querySelectorAll(elem);
 const header = select("#header");
 const home = select("#home");
+const aboutSection = select("#about");
 const navBar = select("#header #nav-bar");
 const elements = selectAll(".headline-container .slide-up-animation");
 const menuIcon = select("#header .menu-icon");
@@ -98,9 +99,10 @@ function renderServices( {
 }
 function addAnimationClassToServicse() {
   const heroHeight = home.offsetHeight;
+  const aboutSectionHeight = aboutSection.offsetHeight;
   const serviceCards = serviceCardContainer.querySelectorAll(".service-card");
   const screenHeight10 = window.innerHeight * 0.4; //40% of screen height
-  const threshold = heroHeight - 500;
+  const threshold = (heroHeight +  aboutSectionHeight)- 500;
 
   serviceCards.forEach((card, index) => {
     const cardImg = card.querySelector(".image");

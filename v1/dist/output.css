@@ -6,7 +6,7 @@
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
 *,
 ::before,
@@ -47,7 +47,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -649,10 +649,6 @@ video {
   height: 2.5rem;
 }
 
-.h-96 {
-  height: 24rem;
-}
-
 .w-full {
   width: 100%;
 }
@@ -707,6 +703,10 @@ video {
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .rounded {
@@ -783,14 +783,6 @@ video {
   background-size: cover;
 }
 
-.bg-right-bottom {
-  background-position: right bottom;
-}
-
-.bg-no-repeat {
-  background-repeat: no-repeat;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -824,6 +816,11 @@ video {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .py-4 {
@@ -912,21 +909,21 @@ video {
 
 body {
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-section{
+section {
   min-height: 50vh;
 }
 
 #header {
-  width:100%;
+  width: 100%;
   background-color: transparent;
-  color:#fff;
+  color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -934,7 +931,7 @@ section{
   transition: 0.2s;
 }
 
-#header .menu-icon{
+#header .menu-icon {
   display: none;
 }
 
@@ -951,7 +948,6 @@ section{
 }
 
 .dropbtn {
-  color:;
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -965,8 +961,9 @@ section{
 .dropdown-content {
   display: none;
   position: absolute;
+  background-color: #fff;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -981,16 +978,16 @@ section{
   display: block;
 }
 
-#header h1{
-  background: linear-gradient(110deg, rgb(4, 132, 252), rgb(51, 253, 51) );
-  background-position:center;
+#header h1 {
+  background: linear-gradient(110deg, rgb(4, 132, 252), rgb(51, 253, 51));
+  background-position: center;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   display: none;
 }
 
-#side-nav{
+#side-nav {
   width: 16rem;
   height: 100vh;
   background-color: #ffffff;
@@ -1003,15 +1000,15 @@ section{
   display: none;
 }
 
-#side-nav h1{
-  background: linear-gradient(110deg, rgb(4, 132, 252), rgb(51, 253, 51) );
-  background-position:center;
+#side-nav h1 {
+  background: linear-gradient(110deg, rgb(4, 132, 252), rgb(51, 253, 51));
+  background-position: center;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
-#side-nav a{
+#side-nav a {
   color: black;
   padding: 10px;
   transition: color 0.3s ease;
@@ -1027,7 +1024,7 @@ section{
   /* Change color on hover */
 }
 
-.overlay{
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -1042,8 +1039,11 @@ section{
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-image:
-  linear-gradient(110deg, rgba(22, 140, 250, 0.9), rgba(123, 255, 123, 0.5));
+  background-image: linear-gradient(
+    110deg,
+    rgba(22, 140, 250, 0.9),
+    rgba(123, 255, 123, 0.5)
+  );
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1067,17 +1067,27 @@ section{
   min-width: 200px;
 }
 
-.slideUp{
+#about .description{
+  max-width: 600px;
+}
+
+#about .image{
+  min-width: 300px;
+  max-height: 100%;
+  height: 100%;
+}
+
+.slideUp {
   animation: slideUp 0.4s ease 1;
 }
 
-#services{
+#services {
   min-height: 50vh;
   width: 100%;
-  padding: 2.5rem ;
+  padding: 2.5rem;
 }
 
-.service-card{
+.service-card {
   width: calc(250px + 10vw);
   border-radius: 1rem;
   margin: 1rem;
@@ -1086,31 +1096,36 @@ section{
   border: 1.5px solid #007bff;
 }
 
-.service-card .image{
+.service-card .description {
+  max-width: 100%;
+}
+
+.service-card .image {
   width: 100%;
   aspect-ratio: 6/4;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 1rem;
-
-  transition: transform 0.8s ease;
+  transition: transform 0.8s ease, opacity 0;
 }
 
-.form-container{
+.form-container {
   background-color: white;
   max-width: 300px;
   border-radius: 10px;
 }
 
-#contact-form input, #contact-form textarea{
+#contact-form input,
+#contact-form textarea {
   width: 90%;
   background-color: #fff;
   border: 0.1rem solid #e3e3e3;
   outline: none;
 }
 
-#contact-form input:focus, #contact-form textarea:focus{
+#contact-form input:focus,
+#contact-form textarea:focus {
   border: 0.1rem solid #02085f;
   outline: 0.12rem solid #069bff;
 }
@@ -1121,67 +1136,67 @@ section{
 
 /*++++++++Why choose us+++++++++++++*/
 
-#feature{
+#feature {
   background-color: #ddf8f2;
 }
 
-#feature h2{
+#feature h2 {
   color: #333f70;
 }
 
-.feature-wrapper div{
+.feature-wrapper div {
   max-width: 400px;
   width: 100%;
-  background-color:#fff;
+  background-color: #fff;
   border: 1.5px solid rgb(2, 70, 2);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: inset 0 0 5px rgb(225, 241, 225);
 }
 
-.feature-wrapper h4{
+.feature-wrapper h4 {
   color: #333f70;
   font-size: 1.5rem;
 }
 
 /*++++++++++++++++++++++++Footer++++++++++++++++++++++++++++++++++++++++++*/
 
-#footer a{
+#footer a {
   color: rgb(189, 211, 219);
 }
 
-#footer h4{
+#footer h4 {
   font-weight: 600;
   margin-bottom: 15px;
   font-size: 17px;
 }
 
-#footer a:hover{
+#footer a:hover {
   color: #069bff;
 }
 
-#footer a{
+#footer a {
   transition: 400ms;
 }
 
-.slideLeft{
+.slideLeft {
   animation: slideLeft 0.8s ease 1;
 }
 
-.slideRight{
+.slideRight {
   animation: slideRight 0.8s ease 1;
 }
 
-.slideUp{
+.slideUp {
   animation: slideUp 0.8s ease 1;
 }
 
-.shiftLeft{
+.shiftLeft {
   transform: translateX(-100%);
   opacity: 0;
 }
 
-.shiftRight{
+.shiftRight {
   transform: translateX(100%);
   opacity: 0;
 }
@@ -1208,7 +1223,7 @@ section{
   }
 }
 
-@keyframes slideUp{
+@keyframes slideUp {
   0% {
     transform: translateY(100%);
   }
@@ -1234,111 +1249,69 @@ section{
   #home {
     min-height: 100vh;
     max-height: 100vh;
-    flex-direction: column!important;
+    flex-direction: column !important;
   }
 
-  #header nav{
+  #header nav {
     display: none;
   }
 
-  .dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
+  #header .menu-icon {
     display: block;
   }
 
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-
-  .dropdown:hover .dropdown-content {
+  #side-nav {
     display: block;
   }
 
-  .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  }
-
-  #header .menu-icon{
-    display: block;
-  }
-
-  #side-nav{
-    display: block;
-  }
-
-  .action-btn-container{
+  .action-btn-container {
     flex-direction: column;
   }
 
-  .service-card{
+  .service-card {
     min-width: calc(230px + 10vw);
     flex-direction: column;
   }
 
-  .service-card .image{
+  .service-card .image {
     width: 100%;
     aspect-ratio: 4/3;
   }
 
-  #footer .links{
-    flex-direction: column!important;
+  #footer .links {
+    flex-direction: column !important;
     padding: 1rem;
     gap: 1rem;
   }
 }
 
-@media (min-width: 576px){
-  .action-btn-container{
+@media (min-width: 576px) {
+  .action-btn-container {
     margin: 1rem 0;
   }
 
-  .service-card{
+  .service-card {
     max-width: 100vh;
     width: 100%;
   }
 
-  .service-card .image{
+  .service-card .image {
     max-width: 500px;
-    min-width: 400px;
     aspect-ratio: 4/3;
   }
 }
 
-@media (min-width: 576px) and (orientation: portrait){
-  #home{
-    height:50vh;
+@media (min-width: 576px) and (orientation: portrait) {
+  #home {
+    height: 50vh;
   }
 
-  .service-card{
+  .service-card {
     max-width: calc(500px + 30vw);
     width: 100%;
   }
 
-  .service-card .image{
+  .service-card .image {
     min-width: 400px;
     aspect-ratio: 4/3;
   }
@@ -1391,4 +1364,3 @@ section{
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
-

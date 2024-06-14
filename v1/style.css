@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
 * {
   font-family: "Poppins", sans-serif;
@@ -10,21 +10,20 @@
 
 body {
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
- 
+  font-family: "Poppins", sans-serif;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-section{
+section {
   min-height: 50vh;
 }
 #header {
-  width:100%;
+  width: 100%;
   background-color: transparent;
-  color:#fff;
+  color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -32,7 +31,7 @@ section{
   transition: 0.2s;
 }
 
-#header .menu-icon{
+#header .menu-icon {
   display: none;
 }
 #header #nav-bar a {
@@ -45,8 +44,6 @@ section{
   color: #007bff; /* Change color on hover */
 }
 .dropbtn {
-  
-  color:;
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -60,9 +57,9 @@ section{
 .dropdown-content {
   display: none;
   position: absolute;
-  
+  background-color: #fff;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -73,22 +70,20 @@ section{
   display: block;
 }
 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-
-.dropdown:hover .dropdown-content {display: block;}
-
-
-#header h1{
-  background: linear-gradient(110deg, rgb(4, 132, 252), rgb(51, 253, 51) );
-  background-position:center;
+#header h1 {
+  background: linear-gradient(110deg, rgb(4, 132, 252), rgb(51, 253, 51));
+  background-position: center;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   display: none;
 }
 
-
-#side-nav{
+#side-nav {
   width: 16rem;
   height: 100vh;
   background-color: #ffffff;
@@ -100,14 +95,14 @@ section{
   transition: 0.3s ease;
   display: none;
 }
-#side-nav h1{
-  background: linear-gradient(110deg, rgb(4, 132, 252), rgb(51, 253, 51) );
-  background-position:center;
+#side-nav h1 {
+  background: linear-gradient(110deg, rgb(4, 132, 252), rgb(51, 253, 51));
+  background-position: center;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
-#side-nav a{
+#side-nav a {
   color: black;
   padding: 10px;
   transition: color 0.3s ease; /* Add a transition for smooth color change */
@@ -120,7 +115,7 @@ section{
   background-color: #e8f2ff;
   color: #007bff; /* Change color on hover */
 }
-.overlay{
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -134,8 +129,11 @@ section{
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-image:
-  linear-gradient(110deg, rgba(22, 140, 250, 0.9), rgba(123, 255, 123, 0.5));
+  background-image: linear-gradient(
+    110deg,
+    rgba(22, 140, 250, 0.9),
+    rgba(123, 255, 123, 0.5)
+  );
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -155,16 +153,30 @@ section{
 .action-btn-container a {
   min-width: 200px;
 }
-.slideUp{
+
+#about .description{
+  max-width: 600px;
+}
+#about .image{
+  min-width: 300px;
+  max-height: 100%;
+  height: 100%;
+}
+
+
+
+
+
+.slideUp {
   animation: slideUp 0.4s ease 1;
 }
 
-#services{
+#services {
   min-height: 50vh;
   width: 100%;
-  padding: 2.5rem ;
+  padding: 2.5rem;
 }
-.service-card{
+.service-card {
   width: calc(250px + 10vw);
   border-radius: 1rem;
   margin: 1rem;
@@ -172,27 +184,32 @@ section{
   box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.2);
   border: 1.5px solid #007bff;
 }
-.service-card .image{
+.service-card .description {
+  max-width: 100%;
+}
+.service-card .image {
   width: 100%;
   aspect-ratio: 6/4;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 1rem;
-  transition: transform 0.8s ease;
+  transition: transform 0.8s ease, opacity 0;
 }
-.form-container{
+.form-container {
   background-color: white;
   max-width: 300px;
   border-radius: 10px;
 }
-#contact-form input, #contact-form textarea{
+#contact-form input,
+#contact-form textarea {
   width: 90%;
   background-color: #fff;
   border: 0.1rem solid #e3e3e3;
   outline: none;
 }
-#contact-form input:focus, #contact-form textarea:focus{
+#contact-form input:focus,
+#contact-form textarea:focus {
   border: 0.1rem solid #02085f;
   outline: 0.12rem solid #069bff;
 }
@@ -200,59 +217,57 @@ section{
   overflow: hidden;
 }
 /*++++++++Why choose us+++++++++++++*/
-#feature{
-background-color: #ddf8f2;
+#feature {
+  background-color: #ddf8f2;
 }
-#feature h2{
+#feature h2 {
   color: #333f70;
 }
-.feature-wrapper div{
+.feature-wrapper div {
   max-width: 400px;
   width: 100%;
-  background-color:#fff;
+  background-color: #fff;
   border: 1.5px solid rgb(2, 70, 2);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: inset 0 0 5px rgb(225, 241, 225);
 }
-.feature-wrapper h4{
+.feature-wrapper h4 {
   color: #333f70;
   font-size: 1.5rem;
 }
 /*++++++++++++++++++++++++Footer++++++++++++++++++++++++++++++++++++++++++*/
-#footer a{
+#footer a {
   color: rgb(189, 211, 219);
 }
 
-#footer h4{
-  font-weight: 600; 
+#footer h4 {
+  font-weight: 600;
   margin-bottom: 15px;
   font-size: 17px;
-  }
-  
-  #footer a:hover{
+}
+
+#footer a:hover {
   color: #069bff;
-  }
-  #footer a{
-    transition: 400ms;
-  }
-  
+}
+#footer a {
+  transition: 400ms;
+}
 
-
-.slideLeft{
+.slideLeft {
   animation: slideLeft 0.8s ease 1;
 }
-.slideRight{
+.slideRight {
   animation: slideRight 0.8s ease 1;
 }
-.slideUp{
+.slideUp {
   animation: slideUp 0.8s ease 1;
 }
-.shiftLeft{
+.shiftLeft {
   transform: translateX(-100%);
   opacity: 0;
 }
-.shiftRight{
+.shiftRight {
   transform: translateX(100%);
   opacity: 0;
 }
@@ -277,7 +292,7 @@ background-color: #ddf8f2;
     transform: translate(0%);
   }
 }
-@keyframes slideUp{
+@keyframes slideUp {
   0% {
     transform: translateY(100%);
   }
@@ -297,105 +312,68 @@ background-color: #ddf8f2;
   }
 }
 
-
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
-    #home {
+  #home {
     min-height: 100vh;
     max-height: 100vh;
-    flex-direction: column!important;
+    flex-direction: column !important;
   }
-  #header nav{
+  #header nav {
     display: none;
   }
-  .dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
+
+  #header .menu-icon {
     display: block;
   }
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
-  #header .menu-icon{
+  #side-nav {
     display: block;
   }
-  #side-nav{
-    display: block;
-  }
-  
-  .action-btn-container{
+
+  .action-btn-container {
     flex-direction: column;
   }
-  .service-card{
+  .service-card {
     min-width: calc(230px + 10vw);
     flex-direction: column;
   }
-  .service-card .image{
+  .service-card .image {
     width: 100%;
     aspect-ratio: 4/3;
   }
-  #footer .links{
-    flex-direction: column!important;
+  #footer .links {
+    flex-direction: column !important;
     padding: 1rem;
     gap: 1rem;
   }
 }
 
-@media (min-width: 576px){
-  .action-btn-container{
+@media (min-width: 576px) {
+  .action-btn-container {
     margin: 1rem 0;
   }
-  .service-card{
+  .service-card {
     max-width: 100vh;
     width: 100%;
   }
-  .service-card .image{
+  .service-card .image {
     max-width: 500px;
-    min-width: 400px;
     aspect-ratio: 4/3;
   }
-  
 }
 
-@media (min-width: 576px) and (orientation: portrait){
-  #home{
-    height:50vh;
+@media (min-width: 576px) and (orientation: portrait) {
+  #home {
+    height: 50vh;
   }
-  .service-card{
+  .service-card {
     max-width: calc(500px + 30vw);
     width: 100%;
   }
-  .service-card .image{
+  .service-card .image {
     min-width: 400px;
     aspect-ratio: 4/3;
   }
-  
 }
 /* Small devices (landscape phones, 5
 76px and up) */
@@ -404,7 +382,6 @@ background-color: #ddf8f2;
     max-height: 100vh;
     flex-direction: column !important;
   }
-  
 }
 
 /* Small devices (portrait phones, 578px and up) */
@@ -427,9 +404,7 @@ background-color: #ddf8f2;
   /* Styles for large devices */
 }
 
-
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   /* Styles for extra large devices */
 }
-
