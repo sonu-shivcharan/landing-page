@@ -53,7 +53,7 @@
 
     <section
       id="home"
-      class="bg-gray-200 px-4 pt-20 flex justify-around items-center"
+      class="px-4 pt-20 flex justify-around items-center"
     >
       <!-- partial -->
 
@@ -84,7 +84,7 @@
       </div>
       <div class="hero-img rounded-lg border-2 border-blue-300 bg-white"></div>
     </section>
-    <section id="services" class="bg-gray-200">
+    <section id="services" class="">
       <h2 class="text-2xl font-bold text-center py-4">Services</h2>
       <div
         id="service-card-container"
@@ -93,46 +93,71 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-10 bg-gray-100">
-      <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold text-gray-800">Features</h2>
-        <p class="text-gray-600 mt-4">What makes us unique.</p>
-        <div class="feature-card-container flex justify-center"></div>
-      </div>
+    <section id="feature" class="p-4 pb-10 bg-gray-100">
+      <h2 class="text-4xl font-bold text-center py-4 my-5">Why Choose Us</h2>
+      <div class="feature-wrapper flex justify-center flex-wrap gap-5">
+        <div>
+          <h4 class="font-bold">Expertise</h4>
+          <p>
+            Our team of experts has decades of combined experience in the tech
+            industry.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold">Innovation</h4>
+          <p>
+            We constantly challenge the status quo to deliver cutting-edge
+            solutions.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold">Reliability</h4>
+          <p>
+            Our products and services are trusted by leading organizations
+            worldwide.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold">Dedication</h4>
+          <p>
+            We are committed to the success of our clients and their long-term
+            growth.
+          </p>
+        </di>
+      </div> 
     </section>
     <section id="contact p-2">
-      <div id="tsparticles">
-        <h3 class="text-center font-bold text-3xl">Contact</h3>
-        <div class="form-container shadow bg-white mx-auto my-8 p-2">
-          <form id="contact-form" class="w-full p-2">
-            <div class="flex flex-wrap justify-center flex-row">
-              <input
-                type="text"
-                placeholder="Name"
-                class="rounded-lg p-2 m-2"
-                required
-              />
-              <input
-                type="tel"
-                placeholder="Phone"
-                class="rounded-lg p-2 m-2"
-                required
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                class="rounded-lg p-2 m-2"
-                required
-              />
-              <textarea class="bg-gray-200 rounded p-2 m-2" required></textarea>
-              <button
-                class="submit-btn w-full text-white rounded-lg p-2 m-2 bg-green-600"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
+      <h3 class="text-center font-bold text-3xl">Contact</h3>
+      <div class="form-container shadow bg-white mx-auto my-8 p-2">
+        <form id="contact-form" class="w-full p-2">
+          <div class="flex flex-wrap justify-center flex-row">
+            <input
+              type="text"
+              placeholder="Name"
+              class="rounded-lg p-2 m-2"
+              required
+            />
+            <input
+              type="tel"
+              placeholder="Phone"
+              class="rounded-lg p-2 m-2"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              class="rounded-lg p-2 m-2"
+              required
+            />
+            <textarea class="bg-gray-200 rounded p-2 m-2" required></textarea>
+            <button
+              class="submit-btn w-full text-white rounded-lg p-2 m-2 bg-green-600"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
     </section>
     <!-- Footer -->
@@ -163,30 +188,33 @@
           <h4>Quick link</h4>
           <a> Blog </a>
           <a>Contact</a>
-          <div class="flex-col">
-            <a> <i class="fa-brands fa-facebook"></i></a>
-            <a><i class="fa-brands fa-whatsapp m-2"></i></a>
+          <div class="flex flex-row gap-2 mt-2">
+            <a><i class="fa-brands fa-facebook"></i></a>
+            <a><i class="fa-brands fa-whatsapp"></i></a>
             <a><i class="fa-brands fa-instagram"></i> </a>
+            <a><i class="fa-brands fa-linkedin"></i></a>
           </div>
         </div>
         <div class="flex flex-col">
           <h4>Address</h4>
-          <h5><i class="fa-solid fa-phone"></i> +91 9067702053</h5>
-          <a><i class="fa-solid fa-globe"></i> rakinisofttech.com</a>
-          <h5>
-            <i class="fa-solid fa-location-dot"></i> Pimpale Gaurav,<br />
-            Pune 411018
-          </h5>
+          <a href="tel:+919067702053"
+            ><i class="fa-solid fa-phone"></i> +91 9067702053</a
+          >
+          <a href="mailto:conatct@rakinisofttech.com"
+            ><i class="fa-solid fa-envelope"></i> contact@rakinisofttech.com</a
+          >
+          <a>
+            <i class="fa-solid fa-location-dot"></i> Pimple Gurav, Pune
+            411018<br />
+          </a>
         </div>
       </div>
-      <hr class="py-5" />
-      <div class="flex justify-center text-4xl">Rakini Softtech</div>
-      <div class="container mx-auto px-6 text-center mt-6">
-        <p>Copyright &copy; 2023 Rakini SoftTech.</p>
+      <hr class="my-5 bg-white" />
+      <div class="flex justify-center text-2xl">Rakini Softtech</div>
+      <div class="container mx-auto px-6 text-center mt-4">
+        <p>Copyright &copy; 2024 Rakini SoftTech.</p>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/tsparticles.all.bundle.min.js"></script>
     <script src="src/main.js"></script>
-    <script src="src/script.js"></script>
   </body>
 </html>
