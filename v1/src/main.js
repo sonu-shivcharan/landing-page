@@ -27,6 +27,7 @@ for (let elem of elements) {
   elem.style.opacity = "0";
 }
 function slideUpAnimation(idx) {
+
   if (idx > elements.length - 1) return;
   elements[idx].style.animation = `slideUp 0.5s ease 1`;
   elements[idx].style.opacity = "1";
@@ -52,13 +53,15 @@ function handleScroll() {
 }
 function getServises() {
   fetch("./assests/services.json")
-    .then((response) => response.json())
-    .then((data) => {
-      renderServices(data);
-    });
+  .then((response) => response.json())
+  .then((data) => {
+    renderServices(data);
+  });
 }
 
-function renderServices({ services }) {
+function renderServices( {
+  services
+}) {
   services.forEach((service, index) => {
     const createCard = document.createElement("div");
 
@@ -90,7 +93,8 @@ function renderServices({ services }) {
     createCard.appendChild(description);
     serviceCardContainer.appendChild(createCard);
   });
-  window.addEventListener("scroll", addAnimationClassToServicse);
+  window.addEventListener("scroll",
+    addAnimationClassToServicse);
 }
 function addAnimationClassToServicse() {
   const heroHeight = home.offsetHeight;
@@ -117,8 +121,12 @@ function addAnimationClassToServicse() {
     }
   });
 }
+}
+
+
+
 window.addEventListener("scroll", handleScroll);
-window.addEventListener("load", () => {
-  slideUpAnimation(0);
-});
+window.addEventListener("load", ()=> {
+  slideUpAnimation(0)});
 window.addEventListener("load", getServises);
+
