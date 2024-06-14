@@ -32,18 +32,39 @@
           <h1 class="p-2 text-2xl font-bold">Rakini</h1>
         </div>
 
-        <nav id="nav-bar" class="flex items-center font-bold">
+        <nav id="nav-bar" class="flex items-center font-bold gap-20">
           <a href="#home">Home</a>
-          <a href="#features">Features</a>
+          <div class="dropdown">
+            <a href="#services" class="dropbtn">Services</a>
+            <div class="dropdown-content">
+              <a href="#">Web Development</a>
+              <a href="#">App Development</a>
+              <a href="#">Data Analysis</a>
+              <a href="#">Networking</a>
+              <a href="#">Cloud Computing</a>
+            </div>
+            </div>
+<!-- Suggested code may be subject to a license. Learn more: ~LicenseLog:3690011227. -->
+          <div class="dropdown">
+          <a href="#features" class="dropbtn">Features</a>
+          <div class="dropdown-content">
+            <a href="#">link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+          </div>
           <a href="#contact">Contact</a>
           <a href="#about">About Us</a>
-        </nav>
+         </nav>
+         
+
       </div>
     </header>
     <div id="side-nav" class="">
       <img src="images/rakini.svg" alt="logo" class="logo w-full h-10" />
       <div class="flex flex-col">
         <a href="#home">Home</a>
+        <a href="#services">Services</a>
         <a href="#features">Features</a>
         <a href="#contact">Contact</a>
         <a href="#about">About Us</a>
@@ -76,19 +97,44 @@
             Learn More
           </a>
           <a
-            href="#fs"
+            href="#contact"
             class="slide-up-animation bg-gray-900/60 p-3 rounded-lg mx-2 mt-2 border-2 border-blue-500 text-white font-bold hover:bg-blue-500 duration-200"
-            >Get In Touch</a
-          >
+            >Get In Touch</a>
         </div>
       </div>
       <div class="hero-img rounded-lg border-2 border-blue-300 bg-white"></div>
     </section>
+    <!--About Section-->
+    <section id="about" class=" bg-gradient-to-r from-cyan-500 to-blue-500 py-10" >
+      <div class="mx-auto px-6 text-center">
+        <h2 class="text-2xl font-bold text-gray-800 mx-auto text-center  bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg">About Us</h2>
+      </div>
+      <div  class="flex">
+     <div class="">
+      <h3 class="mx-auto px-6 text-left font-bold mt-8 w-full">
+        Soft Tech (a Cyncly Company) provides premium software solutions for the window and door industry.
+      </h3>
+      <p class="text-gray-600 mt-4 text-left m-8">
+        Thousands of window and door manufacturers, dealers and suppliers trust us to provide fast and accurate design, estimation and manufacturing solutions.
+        Soft Tech's software is exclusively built to design, estimate and manufacture windows and doors. We therefore help businesses maximize productivity, reduce costs and drive business growth. Most of all, whatever the size of your business, Soft Tech provides the solution that will drive efficiencies in your manufacturing business.
+      <br>
+     
+      </p>
+    </div>
+    <div class="rounded-lg bg-right-bottom bg-cover bg-no-repeat h-96 w-400"><img class="rounded-lg w-400"src="./images/networking.jpg " alt="Italian Trulli"> 
+    </div>
+  </div>
+      
+
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="bg-gray-200">
     <section id="services" class="">
+
       <h2 class="text-2xl font-bold text-center py-4">Services</h2>
       <div
         id="service-card-container"
-        class="flex justify-center flex-wrap gap-20"
+        class="flex justify-center flex-wrap gap-20 "
       ></div>
     </section>
 
