@@ -19,6 +19,7 @@ html {
 
 section {
   min-height: 50vh;
+  overflow-x: hidden;
 }
 #header {
   width: 100%;
