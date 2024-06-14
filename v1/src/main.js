@@ -11,23 +11,29 @@ const serviceCardContainer = select("#service-card-container");
 let scrollTop = 0;
 menuIcon.onclick = () => {
   sidenav.style.transform = "translateX(0%)";
-};
-document.addEventListener("click", (e) => {
-  if (e.target !== sidenav && e.target !== menuIcon) {
+  const overlay = document.createElement("div");
+  overlay.classList.add("overlay");
+  document.body.appendChild(overlay);
+  overlay.style.backdropFilter="blur(2px)"
+  overlay.addEventListener("click",()=>{
     sidenav.style.transform = "translateX(-100%)";
-  }
-});
+    overlay.style.backdropFilter=""
+    overlay.remove();
+  })
+};
+
 
 for (let elem of elements) {
   elem.style.opacity = "0";
 }
 function slideUpAnimation(idx) {
-  if (idx > elements.length-1) return;
+
+  if (idx > elements.length - 1) return;
   elements[idx].style.animation = `slideUp 0.5s ease 1`;
   elements[idx].style.opacity = "1";
   setTimeout(() => {
     slideUpAnimation(idx + 1);
-  }, 150);
+  }, 100);
 }
 function handleScroll() {
   const title = header.getElementsByTagName("h1")[0];
@@ -77,11 +83,11 @@ function renderServices( {
     );
     const title = document.createElement("h4");
     title.classList.add("text-2xl", "text-green-400", "font-bold");
-    title.textContent = service.title;
+    title.innerText = service.title;
+    description.appendChild(title);
     const text = document.createElement("p");
     text.classList.add("text-gray-600");
-    text.textContent = service.description;
-    description.appendChild(title);
+    text.innerText = service.description;
     description.appendChild(text);
     createCard.appendChild(image);
     createCard.appendChild(description);
@@ -93,27 +99,34 @@ function renderServices( {
 function addAnimationClassToServicse() {
   const heroHeight = home.offsetHeight;
   const serviceCards = serviceCardContainer.querySelectorAll(".service-card");
-  const screenHeight10 = window.innerHeight*0.4;//40% of screen height
-  const threshold = heroHeight-400; 
-if (scrollTop >= threshold) {
+  const screenHeight10 = window.innerHeight * 0.4; //40% of screen height
+  const threshold = heroHeight - 500;
+
   serviceCards.forEach((card, index) => {
-    const isEven = (index+1) % 2 === 0;
-    const slideClass = isEven ? "slideLeft" : "slideRight";
-    const shouldSlide = scrollTop >= threshold + ((index+1) * screenHeight10);
-    card.querySelector(".image").classList.add(shouldSlide?slideClass:"");
-    card.style.opacity=1;
-  });
-} else {
-  serviceCards.forEach((card) => {
-    card.querySelector(".image").classList.remove("slideRight", "slideLeft");
-    card.style.opacity=0;
+    const cardImg = card.querySelector(".image");
+    const isEven = (index + 1) % 2 === 0;
+    const slideClass = isEven ? "slideRight" : "slideLeft";
+    const nonSlideClass = isEven ? "shiftRight" : "shiftLeft";
+    const shouldSlide = scrollTop >= threshold + (index + 1) * screenHeight10;
+    if (scrollTop >= threshold) {
+      if (shouldSlide) {
+        cardImg.classList.add(slideClass);
+        cardImg.classList.remove(nonSlideClass);
+        card.style.opacity = 1;
+      }
+    } else {
+      card.style.opacity = 0;
+      cardImg.classList.add(nonSlideClass);
+      cardImg.classList.remove("slideRight", "slideLeft");
+    }
   });
 }
 
 
 
-}
+
 window.addEventListener("scroll", handleScroll);
 window.addEventListener("load", ()=> {
   slideUpAnimation(0)});
 window.addEventListener("load", getServises);
+
