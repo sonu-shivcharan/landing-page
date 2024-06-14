@@ -28,7 +28,6 @@ for (let elem of elements) {
   elem.style.opacity = "0";
 }
 function slideUpAnimation(idx) {
-
   if (idx > elements.length - 1) return;
   elements[idx].style.animation = `slideUp 0.5s ease 1`;
   elements[idx].style.opacity = "1";
@@ -39,7 +38,6 @@ function slideUpAnimation(idx) {
 function handleScroll() {
   const title = header.getElementsByTagName("h1")[0];
   scrollTop = window.scrollY;
-
   if (scrollTop >= 100) {
     // Show the title and change header styles for scrolled state
     title.style.display = "block";
@@ -60,9 +58,7 @@ function getServises() {
   });
 }
 
-function renderServices( {
-  services
-}) {
+function renderServices({services}) {
   services.forEach((service, index) => {
     const createCard = document.createElement("div");
 
@@ -94,8 +90,7 @@ function renderServices( {
     createCard.appendChild(description);
     serviceCardContainer.appendChild(createCard);
   });
-  window.addEventListener("scroll",
-    addAnimationClassToServicse);
+  //window.addEventListener("scroll",addAnimationClassToServicse);
 }
 function addAnimationClassToServicse() {
   const heroHeight = home.offsetHeight;
