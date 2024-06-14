@@ -918,6 +918,7 @@ html {
 
 section {
   min-height: 50vh;
+  overflow-x: hidden;
 }
 
 #header {
@@ -1039,14 +1040,11 @@ section {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-image: linear-gradient(
-    110deg,
-    rgba(22, 140, 250, 0.9),
-    rgba(123, 255, 123, 0.5)
-  );
+  background-image: linear-gradient(110deg, rgba(22, 140, 250, 0.9),rgba(123, 255, 123, 0.5)), url('./bg1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .hero-img {
@@ -1176,7 +1174,7 @@ section {
 }
 
 #footer a {
-  transition: 400ms;
+  transition: 200ms;
 }
 
 .slideLeft {
@@ -1247,8 +1245,7 @@ section {
 
 @media (max-width: 575.98px) {
   #home {
-    min-height: 100vh;
-    max-height: 100vh;
+    min-height: 80vh;
     flex-direction: column !important;
   }
 
@@ -1302,8 +1299,8 @@ section {
 }
 
 @media (min-width: 576px) and (orientation: portrait) {
-  #home {
-    height: 50vh;
+  section {
+    height: 50vh!important;
   }
 
   .service-card {
