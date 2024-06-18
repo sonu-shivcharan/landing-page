@@ -43,11 +43,13 @@ function handleScroll() {
     title.style.display = "block";
     header.style.backgroundColor = "#fff";
     header.style.color = "#000";
+    header.classList.add("shadow");
   } else {
     // Hide the title and change header styles for non-scrolled state
     title.style.display = "none";
     header.style.backgroundColor = "transparent";
     header.style.color = "#fff";
+    header.classList.remove("shadow");
   }
 }
 function getServises() {
@@ -63,9 +65,9 @@ function renderServices({services}) {
     const createCard = document.createElement("div");
 
     if (index % 2 == 0) {
-      createCard.classList.add("service-card", "flex", "flex-row");
+      createCard.classList.add("service-card", "flex", "flex-row", "justify-center");
     } else {
-      createCard.classList.add("service-card", "flex", "flex-row-reverse");
+      createCard.classList.add("service-card", "flex", "flex-row-reverse", "justify-center");
     }
     const image = document.createElement("div");
     image.classList.add("image");

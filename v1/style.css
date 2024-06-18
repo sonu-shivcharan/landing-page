@@ -6,6 +6,7 @@
 * {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
 body {
@@ -16,7 +17,13 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
+.text-gradient-primary{
+  background: linear-gradient(110deg, rgb(4, 132, 252), rgb(51, 253, 51));
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
 section {
   min-height: 50vh;
   overflow-x: hidden;
@@ -129,15 +136,15 @@ section {
 #home {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   background-image: linear-gradient(
     110deg,
-    rgba(22, 140, 250, 0.9),
-    rgba(123, 255, 123, 0.5)
+    #168cfa,
+    #7bff7b
   );
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center;  
 }
 .hero-img {
   max-width: calc(20rem + 2vw);
@@ -155,18 +162,17 @@ section {
   min-width: 200px;
 }
 
-#about .description{
-  max-width: 600px;
+#about .description {
+  max-width: 900px;
+  box-shadow:0 0 10px #e0e0e0;
 }
-#about .image{
-  min-width: 300px;
-  max-height: 100%;
-  height: 100%;
+#about{
+  width: 100vw;
+  min-height: 50vh!important;
 }
-
-
-
-
+#about h2{
+  font-size: calc( 1.6rem + 1.5vw );
+}
 
 .slideUp {
   animation: slideUp 0.4s ease 1;
@@ -178,24 +184,22 @@ section {
   padding: 2.5rem;
 }
 .service-card {
-  width: calc(250px + 10vw);
+  width: 100vw;
   border-radius: 1rem;
   margin: 1rem;
   transition: 0.3s;
-  box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.2);
-  border: 1.5px solid #007bff;
 }
 .service-card .description {
-  max-width: 100%;
+  max-width: 500px;
 }
 .service-card .image {
   width: 100%;
-  aspect-ratio: 6/4;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 1rem;
   transition: transform 0.8s ease, opacity 0;
+  box-shadow: 0 0 10px #bdbdbd;
 }
 .form-container {
   background-color: white;
@@ -334,8 +338,11 @@ section {
   .action-btn-container {
     flex-direction: column;
   }
+  #about {
+    flex-direction: column;
+  }
   .service-card {
-    min-width: calc(230px + 10vw);
+    width: 100vw;
     flex-direction: column;
   }
   .service-card .image {
@@ -353,8 +360,9 @@ section {
   .action-btn-container {
     margin: 1rem 0;
   }
+
   .service-card {
-    max-width: 100vh;
+    max-width: 100vw;
     width: 100%;
   }
   .service-card .image {
@@ -365,7 +373,10 @@ section {
 
 @media (min-width: 576px) and (orientation: portrait) {
   #home {
-    height: 50vh;
+    max-height: 50vh!important;
+  }
+  body {
+    background-color: lightblue; 
   }
   .service-card {
     max-width: calc(500px + 30vw);
