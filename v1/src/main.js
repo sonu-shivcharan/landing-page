@@ -10,15 +10,16 @@ const sidenav = select("#side-nav");
 const featureCardContainer = select(".feature-card-container");
 const serviceCardContainer = select("#service-card-container");
 let scrollTop = 0;
+window.addEventListener("resize",()=>{console.log(window.innerWidth)})
 menuIcon.onclick = () => {
   sidenav.style.transform = "translateX(0%)";
   const overlay = document.createElement("div");
   overlay.classList.add("overlay");
   document.body.appendChild(overlay);
-  overlay.style.backdropFilter="blur(2px)"
+  //overlay.style.backdropFilter="blur(2px)"
   overlay.addEventListener("click",()=>{
     sidenav.style.transform = "translateX(-100%)";
-    overlay.style.backdropFilter=""
+    //overlay.style.backdropFilter=""
     overlay.remove();
   })
 };
