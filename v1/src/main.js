@@ -1,4 +1,4 @@
-import addAnimation from "./obeserver.js";
+import addAnimation from "./observer.js";
 const select = (elem) => document.querySelector(elem);
 const selectAll = (elem) => document.querySelectorAll(elem);
 const header = select("#header");
@@ -69,18 +69,20 @@ function renderServices({ services }) {
         "service-card",
         "flex",
         "flex-row",
-        "justify-center"
+        "justify-center",
+        "anime-element"  
       );
     } else {
       createCard.classList.add(
         "service-card",
         "flex",
         "flex-row-reverse",
-        "justify-center"
+        "justify-center",
+        "anime-element"  
       );
     }
     const image = document.createElement("div");
-    image.classList.add("image", "anim-element");
+    image.classList.add("image", "anime-element");
     image.style.backgroundImage = `url(${service.image})`;
     const description = document.createElement("div");
     description.classList.add(
@@ -89,7 +91,6 @@ function renderServices({ services }) {
       "flex",
       "flex-col",
       "justify-center",
-      "anim-element"
     );
     const title = document.createElement("h4");
     title.classList.add("text-2xl", "text-green-400", "font-bold");
@@ -107,6 +108,7 @@ function renderServices({ services }) {
 window.addEventListener("scroll", handleScroll);
 window.addEventListener("load", () => {
   slideUpAnimation(0);
-  addAnimation(".anim-element", "shiftLeft");
+  addAnimation(".anime-element", "shiftLeft");
+  setTimeout(()=>{addAnimation(".anime-element2", "shiftRight"), 400});
 });
 window.addEventListener("load", getServises);

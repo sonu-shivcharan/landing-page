@@ -4,12 +4,12 @@
   .slideRight {
     animation: slideRight 0.8s ease 1;
   }
-  @media (prefers-reduced-motion: no-preference) {
-  .slideUp {
+ 
+  .shiftDown {
     overflow-y: hidden;
-    animation: slideUp 0.8s ease 1;
+    transform: translateY(70%);
   }
-}
+
   .shiftLeft {
     transform: translateX(-70%);
     opacity: 0;
