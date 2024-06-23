@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Web-Development | Rakini SoftTech</title>
+    <!--tailwind css-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!--font-awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <link rel="stylesheet" href="./../style.css" />
+  </head>
+  <body>
+    <div class="flex justify-center items-center fixed w-full top-0 left-0 z-50 pt-3">
+    <header id="header" class="flex justify-between items-center rounded-lg">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <div class="flex items-center">
+          <i class="menu-icon fa-solid fa-bars text-2xl p-2"></i>
+          <h1 class="p-2 text-2xl font-bold">Rakini</h1>
+        </div>
+
+        <nav id="nav-bar" class="flex items-center font-bold gap-6">
+          <a href="./../../index.html">Home</a>
+          <div class="dropdown">
+            <a href="#services" class="dropbtn">Services</a>
+            <div class="dropdown-content shadow-lg rounded">
+              <a href="#">App Development</a>
+              <a href="#">Data Analysis</a>
+              <a href="#">Networking</a>
+              <a href="#">Cloud Computing</a>
+            </div>
+          </div>
+          <!-- Suggested code may be subject to a license. Learn more: ~LicenseLog:3690011227. -->
+          <div class="dropdown">
+            <a href="#feature" class="dropbtn">Features</a>
+            <div class="dropdown-content shadow-lg rounded">
+              <a href="#">link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <a href="#contact">Contact</a>
+          <a href="#about">About Us</a>
+        </nav>
+      </div>
+    </header>
+    </div>
+    <section id="hero-section" class="flex flex-col justify-center items-center bg-gray-200 bg-center bg-cover bg-no-repeat" style="background-image:linear-gradient(90deg, rgba(22, 140, 250, 0.7), rgba(123, 255, 123, 0.5)), url('./web-dev.jpg');">
+      <div class="headline-container mx-auto px-2">
+      <h1 id="headline" class="font-bold p-4">Cutting-Edge Web Development Solutions</h1>
+        <p class="font-bold text-xl p-2 rounded-xl">Transforming Ideas into Dynamic Online Experiences</p>
+       </div>
+        <a
+        href="#contact" id="cta-btn"
+        class="slide-up-animation p-3 rounded-lg mx-2 mt-5 border-2 border-blue-500 text-white font-bold bg-blue-500 hover:bg-blue-600 transition-all ease-in-out delay-5 duration-200"
+        >Contact us</a>
+    </section>  
+    <section id="services" class="h-screen">
+
+    </section>
+    <script src="./../src/index.js"></script>
+  </body>
+</html>

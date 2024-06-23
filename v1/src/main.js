@@ -2,15 +2,10 @@ import addAnimation from "./observer.js";
 const select = (elem) => document.querySelector(elem);
 const selectAll = (elem) => document.querySelectorAll(elem);
 const header = select("#header");
-const home = select("#home");
-const aboutSection = select("#about");
-const navBar = select("#header #nav-bar");
 const elements = selectAll(".headline-container .slide-up-animation");
 const menuIcon = select("#header .menu-icon");
 const sidenav = select("#side-nav");
-const featureCardContainer = select(".feature-card-container");
 const serviceCardContainer = select("#service-card-container");
-let scrollTop = 0;
 menuIcon.onclick = () => {
   sidenav.style.transform = "translateX(0%)";
   const overlay = document.createElement("div");
@@ -37,7 +32,7 @@ function slideUpAnimation(idx) {
 }
 function handleScroll() {
   const title = header.getElementsByTagName("h1")[0];
-  scrollTop = window.scrollY;
+  let scrollTop = window.scrollY;
   if (scrollTop >= 100) {
     // Show the title and change header styles for scrolled state
     title.style.display = "block";
