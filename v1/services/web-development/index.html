@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services | Web-Development | Rakini SoftTech</title>
-    <!--tailwind css-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <!--font-awesome-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    
-    <link rel="stylesheet" href="./../style.css" />
-  </head>
-  <body>
-    <div class="flex justify-center items-center fixed w-full top-0 left-0 z-50 pt-3">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Web-Development | Rakini SoftTech</title>
+  <!--tailwind css-->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!--font-awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="./../style.css" />
+</head>
+
+<body>
+  <div class="flex justify-center items-center fixed w-full top-0 left-0 z-50 pt-3">
     <header id="header" class="flex justify-between items-center rounded-lg">
       <div class="container mx-auto px-4 flex justify-between items-center">
         <div class="flex items-center">
@@ -54,20 +49,141 @@
         </nav>
       </div>
     </header>
+  </div>
+  <section id="hero-section"
+    class="flex flex-col justify-center items-center bg-gray-200 bg-center bg-cover bg-no-repeat" style="
+        background-image: linear-gradient(
+            90deg,
+            rgba(22, 140, 250, 0.7),
+            rgba(123, 255, 123, 0.5)
+          ),
+          url('./web-dev.jpg');
+      ">
+    <div class="headline-container mx-auto px-2">
+      <h1 id="headline" class="font-bold p-4">
+        Cutting-Edge Web Development Solutions
+      </h1>
+      <p class="font-bold text-xl p-2 rounded-xl">
+        Transforming Ideas into Dynamic Online Experiences
+      </p>
     </div>
-    <section id="hero-section" class="flex flex-col justify-center items-center bg-gray-200 bg-center bg-cover bg-no-repeat" style="background-image:linear-gradient(90deg, rgba(22, 140, 250, 0.7), rgba(123, 255, 123, 0.5)), url('./web-dev.jpg');">
-      <div class="headline-container mx-auto px-2">
-      <h1 id="headline" class="font-bold p-4">Cutting-Edge Web Development Solutions</h1>
-        <p class="font-bold text-xl p-2 rounded-xl">Transforming Ideas into Dynamic Online Experiences</p>
-       </div>
-        <a
-        href="#contact" id="cta-btn"
-        class="slide-up-animation p-3 rounded-lg mx-2 mt-5 border-2 border-blue-500 text-white font-bold bg-blue-500 hover:bg-blue-600 transition-all ease-in-out delay-5 duration-200"
-        >Contact us</a>
-    </section>  
-    <section id="services" class="h-screen">
+    <a href="#contact" id="cta-btn"
+      class="slide-up-animation p-3 rounded-lg mx-2 mt-5 border-2 border-blue-500 text-white font-bold bg-blue-500 hover:bg-blue-600 transition-all ease-in-out delay-5 duration-200">Contact
+      us</a>
+  </section>
+  <section id="services" class="">
+    <h2 class="text-3xl font-bold text-center py-5">Our Services</h2>
+    <div class="service-card-container flex flex-wrap justify-center items-center gap-10">
+      <div class="service-card">
+        <h3>Web Application Development</h3>
+        <p>
+          Developing custom web applications to streamline your business
+          processes.
+        </p>
+      </div>
+      <div class="service-card">
+        <h3>E-commerce Development</h3>
+        <p>Building powerful online stores to drive your sales.</p>
+      </div>
+      <div class="service-card">
+        <h3>Content Management Systems</h3>
+        <p>
+          Implementing user-friendly CMS solutions for easy content
+          management.
+        </p>
+      </div>
+      <div class="service-card">
+        <h3>Responsive Design</h3>
+        <p>
+          Ensuring your website looks and functions seamlessly on all devices.
+        </p>
+      </div>
 
-    </section>
-    <script src="./../src/index.js"></script>
-  </body>
+      <div class="service-card">
+        <h3>Search Engine Optimization</h3>
+        <p>
+          Optimizing your website for increased visibility and organic
+          traffic.
+        </p>
+      </div>
+      <div class="service-card">
+        <h3>Website Maintenance</h3>
+        <p>
+          Providing ongoing support and updates to keep your website running
+          smoothly.
+        </p>
+      </div>
+    </div>
+  </section>
+<!----+++++++++++++++++++++++-technologies--+++++++++++++++++++++++= -------->
+  <section id="technology">
+    <h2>Technologies We Use</h2>
+    <div class="technology-grid flex justify-center items-center gap-10 flex-wrap">
+        <div class="technology-item">
+            <h3>Front-End</h3>
+            <ul id="carousel">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Angular</li>
+                <li>Vue.js</li>
+                <li>Bootstrap</li>
+                <li>Sass</li>
+            </ul>
+        </div>
+        <div class="technology-item">
+            <h3>Back-End</h3>
+            <ul>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>PHP</li>
+                <li>Python</li>
+                <li>Django</li>
+                <li>Ruby on Rails</li>
+            </ul>
+        </div>
+        <div class="technology-item">
+            <h3>Databases</h3>
+            <ul>
+                <li>MySQL</li>
+                <li>PostgreSQL</li>
+                <li>MongoDB</li>
+                <li>SQLite</li>
+            </ul>
+        </div>
+        <div class="technology-item">
+            <h3>Version Control</h3>
+            <ul>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>GitLab</li>
+            </ul>
+        </div>
+        <div class="technology-item">
+            <h3>Deployment & DevOps</h3>
+            <ul>
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>AWS</li>
+                <li>Azure</li>
+                <li>CI/CD Tools</li>
+            </ul>
+        </div>
+        <div class="technology-item">
+            <h3>Additional Tools</h3>
+            <ul>
+                <li>Webpack</li>
+                <li>Babel</li>
+                <li>NPM</li>
+                <li>Yarn</li>
+            </ul>
+        </div>
+    </div>
+    
+</section>
+
+  <script src="./../src/index.js"></script>
+</body>
+
 </html>

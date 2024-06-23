@@ -15,18 +15,4 @@ function handleScroll() {
     header.classList.remove("shadow-md");
   }
 }
-const carousel = document.getElementById('carousel');
-const items = carousel.querySelectorAll('li');
-let scrollAmount = 0;
-const scrollSpeed = 2; 
-const totalWidth = Array.from(items).reduce((acc, item) => acc + item.offsetWidth + 20, 0); // Calculate total width including margins
-function scrollCarousel() {
-  scrollAmount += scrollSpeed;
-  // Seamless transition: When reaching the end, reset scroll position
-  if (scrollAmount >= totalWidth) {
-    scrollAmount = 0;
-  }
-  carousel.scrollTo(scrollAmount, 0); 
-}
-setInterval(scrollCarousel, 30);   
 window.addEventListener("scroll", handleScroll);
