@@ -124,6 +124,19 @@ html {
   color: white;
   text-align: center;
   padding: 20px;
+  position: relative;
+}
+#hero-section::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+}
+#hero-section >.headline-container,#hero-section > #cta-btn {
+  z-index: 1;
 }
 .healine-container {
   max-width: 800px;
