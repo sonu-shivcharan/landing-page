@@ -26,7 +26,7 @@ function handleScrollHero(){
   heroSection.style.transform = `translateY(-${scrollTop/2}px)`;
   const headlineContainer = heroSection.getElementsByClassName("headline-container")[0];
   if(scrollTop<=200) headlineContainer.style.transform = `scale(${1 - scrollTop/1000})`;
-  console.log(1 - scrollTop/1000);
+  
   //heroSection.getElementsByClassName("headline-container")[0].style.transform = `scale(${1 - scrollTop*0.200}px)`;
   //scale(${1 - scrollTop/1000})`;
 }
