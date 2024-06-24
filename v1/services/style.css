@@ -127,6 +127,7 @@ html {
   z-index: -1;
   position: fixed;
   top:0;
+  transition: 0.05s ease;
 }
 #hero-section::before {
   content: "";
@@ -197,7 +198,7 @@ html {
 }
 
 .technology-item {
-  max-width: 500px;
+  max-width: 900px;
   width: 100%;
   background: #fff;
   border-radius: 8px;
@@ -207,17 +208,18 @@ html {
 }
 
 .technology-item h3 {
+  font-size: 24px;
+  font-weight: bold;
   margin-bottom: 20px;
   color: #333;
 }
 
 .technology-item ul {
   display: flex;
-  justify-content: space-between;
-  overflow-x: hidden;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   list-style-type: none;
   padding:0 2rem;
-  mask: linear-gradient(to right, transparent 0%, #fff 50%, transparent 100%);
 
 }
 
@@ -226,4 +228,8 @@ html {
   min-width:100px;
   padding: 5px 0;
   color: #555;
+}
+.technology-item ul i{
+  font-size: 4rem;
+  padding: 10px;
 }
