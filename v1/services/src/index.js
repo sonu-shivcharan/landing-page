@@ -1,4 +1,9 @@
-function handleScroll() {
+(()=>{
+  const heroHeight = document.getElementById("hero-section").clientHeight;
+  const services = document.getElementById("services");
+  services.style.marginTop = `${heroHeight}px`;
+})();
+function handleScrollNavbar() {
   const title = header.getElementsByTagName("h1")[0];
   let scrollTop = window.scrollY;
   if (scrollTop >= 50) {
@@ -15,4 +20,12 @@ function handleScroll() {
     header.classList.remove("shadow-md");
   }
 }
-window.addEventListener("scroll", handleScroll);
+function handleScrollHero(){
+  const heroSection = document.getElementById("hero-section");
+  let scrollTop = window.scrollY;
+  heroSection.style.transform = `translateY(-${scrollTop/2}px)`;
+  //heroSection.getElementsByClassName("headline-container")[0].style.transform = `scale(${1 - scrollTop*0.200}px)`;
+  //scale(${1 - scrollTop/1000})`;
+}
+window.addEventListener("scroll", handleScrollNavbar);
+window.addEventListener( "scroll", handleScrollHero);
