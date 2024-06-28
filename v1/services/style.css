@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
 * {
@@ -36,7 +40,7 @@ html {
 }
 
 #header nav a:hover {
-  color: #007bff; /* Change color on hover */
+  border-bottom: 2px solid white; /* Change color on hover */
 }
 .dropbtn {
   padding: 16px;
@@ -52,9 +56,11 @@ html {
 .dropdown-content {
   display: none;
   position: absolute;
+  top: -10;
   background-color: #fff;
   min-width: 160px;
   z-index: 1;
+  animation: zoomIn 0.3s ease 1;
 }
 
 .dropdown-content a {
@@ -100,10 +106,6 @@ html {
   font-weight: bold;
 }
 
-#side-nav a:hover {
-  background-color: #e8f2ff;
-  color: #007bff; /* Change color on hover */
-}
 .overlay {
   position: fixed;
   top: 0;
@@ -126,7 +128,7 @@ html {
   padding: 20px;
   z-index: -1;
   position: fixed;
-  top:0;
+  top: 0;
   transition: 0.05s ease;
 }
 #hero-section::before {
@@ -138,7 +140,8 @@ html {
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2px);
 }
-#hero-section >.headline-container,#hero-section > #cta-btn {
+#hero-section > .headline-container,
+#hero-section > #cta-btn {
   z-index: 1;
 }
 .healine-container {
@@ -162,7 +165,7 @@ html {
   background-color: #f9f9f9;
   width: 100%;
   min-height: 50vh;
-  z-index:4;
+  z-index: 4;
 }
 .service-card-container {
   max-width: 1200px;
@@ -219,17 +222,37 @@ html {
   justify-content: space-evenly;
   flex-wrap: wrap;
   list-style-type: none;
-  padding:0 2rem;
-
+  padding: 0 2rem;
 }
 
-
 .technology-item ul li {
-  min-width:100px;
+  min-width: 100px;
   padding: 5px 0;
   color: #555;
 }
-.technology-item ul i{
+.technology-item ul i {
   font-size: 4rem;
   padding: 10px;
+}
+
+.form-container {
+  max-width: 700px;
+}
+.form-container input,
+.form-container textarea {
+  width: 90%;
+  border: 1.5px solid #555;
+}
+
+@media (max-width: 575.98px) {
+  #nav-bar {
+    display: none;
+  }
+
+  #header .menu-icon {
+    display: block;
+  }
+  #headline {
+    font-size: calc(1.6rem + 1vw);
+  }
 }

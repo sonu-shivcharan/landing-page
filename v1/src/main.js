@@ -1,8 +1,8 @@
 import addAnimation from "./observer.js";
+import contactForm from "../services/src/contactForm.js";
 const select = (elem) => document.querySelector(elem);
 const selectAll = (elem) => document.querySelectorAll(elem);
 const header = select("#header");
-const elements = selectAll(".headline-container .slide-up-animation");
 const menuIcon = select("#header .menu-icon");
 const sidenav = select("#side-nav");
 const serviceCardContainer = select("#service-card-container");
@@ -18,11 +18,14 @@ menuIcon.onclick = () => {
     overlay.remove();
   });
 };
-
-for (let elem of elements) {
-  elem.style.opacity = "0";
-}
+(() => {
+  const elements = selectAll(".headline-container .slide-up-animation");
+  for (let elem of elements) {
+    elem.style.opacity = 0;
+  }
+})();
 function slideUpAnimation(idx) {
+  const elements = selectAll(".headline-container .slide-up-animation");
   if (idx > elements.length - 1) return;
   elements[idx].style.animation = `slideUp 0.5s ease 1`;
   elements[idx].style.opacity = "1";
@@ -47,13 +50,13 @@ function handleScroll() {
     header.classList.remove("shadow");
   }
 }
-function getServises() {
+(function getServises() {
   fetch("./assests/services.json")
     .then((response) => response.json())
     .then((data) => {
       renderServices(data);
     });
-}
+})();
 
 function renderServices({ services }) {
   services.forEach((service, index) => {
@@ -65,7 +68,7 @@ function renderServices({ services }) {
         "flex",
         "flex-row",
         "justify-center",
-        "anime-element"  
+        "anime-element"
       );
     } else {
       createCard.classList.add(
@@ -73,7 +76,7 @@ function renderServices({ services }) {
         "flex",
         "flex-row-reverse",
         "justify-center",
-        "anime-element"  
+        "anime-element"
       );
     }
     const image = document.createElement("div");
@@ -104,6 +107,9 @@ window.addEventListener("scroll", handleScroll);
 window.addEventListener("load", () => {
   slideUpAnimation(0);
   addAnimation(".anime-element", "shiftLeft");
-  setTimeout(()=>{addAnimation(".anime-element2", "shiftRight"), 400});
+  setTimeout(() => { addAnimation(".anime-element2", "shiftRight"), 400 });
 });
-window.addEventListener("load", getServises);
+
+window.addEventListener("load", ()=>{contactForm("#contact")});
+
+

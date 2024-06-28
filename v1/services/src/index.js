@@ -1,3 +1,4 @@
+import contactForm from "./contactForm.js";
 (()=>{
   const heroHeight = document.getElementById("hero-section").clientHeight;
   const services = document.getElementById("services");
@@ -32,3 +33,5 @@ function handleScrollHero(){
 }
 window.addEventListener("scroll", handleScrollNavbar);
 window.addEventListener( "scroll", handleScrollHero);
+
+window.addEventListener("load", ()=>{contactForm("#contact")});
