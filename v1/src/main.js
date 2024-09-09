@@ -110,6 +110,8 @@ window.addEventListener("load", () => {
   setTimeout(() => { addAnimation(".anime-element2", "shiftRight"), 400 });
 });
 
-window.addEventListener("load", ()=>{contactForm("#contact")});
+window.addEventListener("load", ()=>{
+  contactForm("#contact")
+});
 
 
